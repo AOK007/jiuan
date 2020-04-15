@@ -1,3 +1,3 @@
-1.°²×°git °²×°pymysql gitÁ¬½Ógithub Éú³ÉkeyÊäÈëwindowsÊäÈëclip < ~/.ssh/id_rsa.pub linux ÊäÈëxclip -sel clip < ~/.ssh/id_rsa.pubÕâÑù¿ÉÒÔ¸´ÖÆkeyÖµ ÔËĞĞ°²È«ÃÜÂë¶¼ÊÇwww8899878
-2.ÊÖ»úµçÄÔ¶¼¿ÉÒÔÍ¬²½github ´´½¨·ÖÖ§ git branch name ²é¿´·ÖÖ§ git branch ÇĞ»»·ÖÖ§ git checkout name ºÏ²¢·ÖÖ§ git merge name É¾³ı·ÖÖ§git branch -d name
-3.gitÍ¬²½github 1.³öÊÛÎÄ¼ş¼Ğ git init 2.git add. (Ìá½»ËùÓĞÎÄ¼şµ½¹¤×÷Çø) 3.git commit -m "×¢ÊÍ" 4.git remote add origin https://github.com/AOK007/jiuan.gitÍ¬²½Ô´ 5.git push origin masterÍ¬²½µ½Ô¶³Ì²Ö¿â 6Í¬²½µ½±¾µØ git pull
+ï»¿1.å®‰è£…git å®‰è£…pymysql gitè¿æ¥github ç”Ÿæˆkeyè¾“å…¥windowsè¾“å…¥clip < ~/.ssh/id_rsa.pub linux è¾“å…¥xclip -sel clip < ~/.ssh/id_rsa.pubè¿™æ ·å¯ä»¥å¤åˆ¶keyå€¼ è¿è¡Œå®‰å…¨å¯†ç éƒ½æ˜¯www8899878
+2.æ‰‹æœºç”µè„‘éƒ½å¯ä»¥åŒæ­¥github åˆ›å»ºåˆ†æ”¯ git branch name æŸ¥çœ‹åˆ†æ”¯ git branch åˆ‡æ¢åˆ†æ”¯ git checkout name åˆå¹¶åˆ†æ”¯ git merge name åˆ é™¤åˆ†æ”¯git branch -d name
+3.gitåŒæ­¥github 1.å‡ºå”®æ–‡ä»¶å¤¹ git init 2.git add. (æäº¤æ‰€æœ‰æ–‡ä»¶åˆ°å·¥ä½œåŒº) 3.git commit -m "æ³¨é‡Š" 4.git remote add origin https://github.com/AOK007/jiuan.gitåŒæ­¥æº 5.git push origin masteråŒæ­¥åˆ°è¿œç¨‹ä»“åº“ 6åŒæ­¥åˆ°æœ¬åœ° git pull
