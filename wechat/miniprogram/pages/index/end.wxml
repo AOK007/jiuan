@@ -1,0 +1,10 @@
+<view >
+ <text style="background: red; font-weight: bold; font-style:italic;">by 黄石的孩子
+</text>
+bright 
+</view>
+<!-- <view>
+<!-- <navigator url='../wupin/wupin'> -->
+<!-- <image class="msg"src="{{msg}}"></image> -->
+<!-- </navigator> -->
+<!-- </view> --> 

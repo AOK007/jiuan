@@ -1,0 +1,64 @@
+page{
+height: 100%;
+/* display: flex; */
+}
+.ys{
+  height: 1200rpx;
+  /* background: red;*/
+  display: flex;
+  /* flex-direction: column;  */
+}
+.sll{
+  height: 1200rpx;
+  flex-direction: column;
+  flex: 1;
+ /* background: rebeccapurple; */
+}
+/* .out-box{
+  background:#ccc;
+  height: 100%;
+} */
+.text {
+  height: 20rpx;
+  flex-direction:column;
+  font-size: 12pt;
+  text-indent:20px;
+}
+.image{
+  /* width: auto;
+  height: auto; */
+  max-width: 100%;
+  max-height: 100%;
+  /* repeat-x:auto; */
+  width: 100%;
+  height: 360rpx;
+}
+.video{
+   width:100%;
+  height: calc(9 * 750rpx / 16);
+  background-color: #fff;
+   line-height: 20rpx;
+}
+.play{ 
+    position:absolute;
+    left:50%;
+    margin-top:-300rpx;
+    margin-left:-80rpx;    
+}
+.myVideo{ 
+  width:100%;
+  height: calc(9 * 750rpx / 16);
+  background-color: #fff;
+}
+.qianm{
+  font-style: oblique;
+  background: rosybrown
+}
+.beizhu{
+  font-style:  italic;
+  font-weight: bold;
+  background: red;
+}
+.baoxian{
+  width: 100%
+}

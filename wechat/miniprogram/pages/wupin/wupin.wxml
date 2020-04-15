@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">姓名</view>
+    <input name="name" placeholder="请输入姓名" />
+  </view>
+  <view class="section">
+    <view class="section__title">手机号</view>
+    <input name="moble" placeholder="请输入手机号码" />
+  </view>
+  <view class="section">
+    <view class="section__title">主题</view>
+    <input name="title" placeholder="请输入标题" />
+  </view>
+  <view class="section__title">内容</view>
+   <scroll-view scroll-y class="sll">
+  <editor class="centent" placeholder="请输入详细内容">
+ </editor>
+  </scroll-view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>

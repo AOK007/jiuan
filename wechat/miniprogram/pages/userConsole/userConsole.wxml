@@ -1,0 +1,32 @@
+<!--pages/userConsole/userConsole.wxml-->
+<!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image:url({{avatarUrl}})"
+      size="default"
+    ></button>
+    </view>
+  <view class="container">
+  <view class="uploader">
+    <navigator url="/pages/im/room/room" open-type="navigate" class="uploader-text">
+      <text>进入聊天室</text>
+    </navigator>
+  </view>
+</view>
+<!-- <view> -->
+<!-- <navigator class="bd"  url='../baodan/baodan'>
+<!-- <image class="gg1"src="{{ggy}}"></image> -->
+ <!-- <button formType="submit" style="flex-start;">保险咨询</button> -->
+<!-- </navigator>
+</view>
+<view>
+<navigator class="msg" url='../wupin/wupin'> -->
+<!-- <image class="gg1"src="{{ggy}}"></image> -->
+ <!-- <button formType="submit"style="flex-start;">留言</button>
+</navigator> -->
+<!-- 设计客服功能 -->
+<!-- <button open-type="contact" bindcontact="handleContact">人工客服</button> -->
+<!-- </view> --> 

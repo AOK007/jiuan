@@ -1,0 +1,5 @@
+<view>
+<!-- <navigator url='../baodan/baodan'> -->
+<image class="baoxian"src="{{baoxian}}"></image>
+<!-- </navigator> -->
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "x-segmentBar": "/components/x-segmentBar/x-segmentBar",
+    "x-segmentPane": "/components/x-segmentPane/x-segmentPane"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundColor": "#f0145a",
+  "backgroundTextStyle": "dark"
+}

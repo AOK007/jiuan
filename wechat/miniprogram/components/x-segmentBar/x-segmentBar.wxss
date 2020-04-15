@@ -1,0 +1,15 @@
+/* components/x-segmentBar/x-segmentBar.wxss */.segmentBar{
+  width:100%;
+  height:90rpx;
+  background-color: rgba(250, 248, 242, 0.089);
+  display: flex;
+}
+.segmentItem{
+flex: 1;
+display: flex;
+text-align: center;
+line-height: 80rpx;
+}
+.active{
+  color: skyblue;
+}

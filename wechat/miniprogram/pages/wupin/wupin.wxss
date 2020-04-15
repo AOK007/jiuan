@@ -1,0 +1,4 @@
+.centent{
+  border-style:solid;
+  /* background: rebeccapurple; */
+}

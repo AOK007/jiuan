@@ -1,0 +1,11 @@
+/* miniprogram/pages/input2/input2.wxss */
+.text{
+  font-family: 微软雅黑;
+        color: white;
+        bottom:47px;
+        padding:0px;
+        margin:0px;
+        position:absolute;
+        text-align: center;
+    
+}

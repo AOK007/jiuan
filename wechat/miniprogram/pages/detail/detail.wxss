@@ -1,0 +1,9 @@
+/* miniprogram/pages/detail/detail.wxss */
+.baoxian{
+  height: 220rpx;
+  width: 100%;
+}
+.msg{
+  height:90rpx;
+  
+}

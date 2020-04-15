@@ -1,0 +1,34 @@
+<include src="../index/head.wxml" />
+<view>
+  <text>{{title}}</text>
+</view>
+<view>
+  <text>{{head}}</text>
+</view>
+<image src="{{image}}"></image>
+<view>
+  <text>{{h1}}</text>
+</view>
+<view>
+  <text>{{h2}}</text>
+</view>
+<view>
+  <text>{{h3}}</text>
+</view>
+<view>
+  <text>{{h4}}</text>
+</view>
+<view>
+  <text>{{h5}}</text>
+</view>
+<view>
+  <text>{{centent}}</text>
+</view>
+<view>
+  <text>{{end}}</text>
+</view>
+<view>
+  <text>
+{{rq}}</text>
+</view>
+<include src="../index/end.wxml" />

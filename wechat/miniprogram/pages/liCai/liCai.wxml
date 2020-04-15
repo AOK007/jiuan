@@ -1,0 +1,60 @@
+<!--index.wxml
+ <x-segmentBar segmentItems="{{items}}"  
+ bind:selectChange="selSelectChange"/>
+-->
+<x-segmentPane segmentItems="{{items}}" my-class="ys">
+  <view slot="0">
+    <scroll-view scroll-y class="sll">
+      <!-- <block> -->
+      <view wx:for="{{cx}}" wx:key="index">
+        <navigator class="xq" url='../detail/detail?end={{item.end}} &image={{item.image}}&centent={{item.centent}} &head={{item.head}}&h1={{item.h1}}&h2={{item.h2}}&h3={{item.h3}}&h4={{item.h4}}&h5={{item.h5}}&rq={{item.rq}}'>
+          <text class="text">{{item.title}}</text>
+          <image class="image" src="{{item.image}}" />
+        </navigator>
+      </view>
+      <!-- </block> -->
+    </scroll-view>
+    <!-- </view> -->
+  </view>
+  <!-- </block> -->
+  <view slot="1">
+    <scroll-view scroll-y class="sll">
+      <view class="vie" wx:for="{{sx}}" wx:key="index">
+        <navigator class="xq" url='../detail/detail?end={{item.end}} &image={{item.image}}&centent={{item.centent}} &head={{item.head}}&h1={{item.h1}}&h2={{item.h2}}&h3={{item.h3}}&h4={{item.h4}}&h5={{item.h5}}&rq={{item.rq}}'>
+          <text class="text">{{item.title}}</text>
+          <image class="image" src="{{item.image}}" />
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view slot="2">
+    <scroll-view scroll-y class="sll">
+      <view class="vie" wx:for="{{gp}}" wx:key="index">
+        <navigator class="xq" url='../detail/detail?end={{item.end}} &image={{item.image}}&centent={{item.centent}} &head={{item.head}}&h1={{item.h1}}&h2={{item.h2}}&h3={{item.h3}}&h4={{item.h4}}&h5={{item.h5}}&rq={{item.rq}}'>
+          <text class="text">{{item.title}}</text>
+          <image class="image" src="{{item.image}}" />
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view slot="3">
+    <scroll-view scroll-y class="sll">
+      <view class="vie" wx:for="{{jj}}" wx:key="index">
+        <navigator class="xq" url='../detail/detail?end={{item.end}} &image={{item.image}}&centent={{item.centent}} &head={{item.head}}&h1={{item.h1}}&h2={{item.h2}}&h3={{item.h3}}&h4={{item.h4}}&h5={{item.h5}}&rq={{item.rq}}'>
+          <text class="text">{{item.title}}</text>
+          <image class="image" src="{{item.image}}" />
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <view slot="4">
+    <scroll-view scroll-y class="sll">
+      <view class="vie" wx:for="{{qh}}" wx:key="index">
+        <navigator class="xq" url='../detail/detail?end={{item.end}} &image={{item.image}}&centent={{item.centent}} &head={{item.head}}&h1={{item.h1}}&h2={{item.h2}}&h3={{item.h3}}&h4={{item.h4}}&h5={{item.h5}}&rq={{item.rq}}'>
+          <text class="text">{{item.title}}</text>
+          <image class="image" src="{{item.image}}" />
+        </navigator>
+      </view>
+      </scroll-view>
+  </view>
+</x-segmentPane>
