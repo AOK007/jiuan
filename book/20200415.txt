@@ -1,0 +1,4 @@
+﻿1.安装git 安装pymysql git连接github 生成key输入windows输入clip < ~/.ssh/id_rsa.pub linux 输入xclip -sel clip < ~/.ssh/id_rsa.pub这样可以复制key值 运行安全密码都是www8899878
+2.手机电脑都可以同步github 创建分支 git branch name 查看分支 git branch 切换分支 git checkout name 合并分支 git merge name 删除分支git branch -d name
+3.git同步github 1.出售文件夹 git init 2.git add. (提交所有文件到工作区) 3.git commit -m "注释" 4.git remote add origin https://github.com/AOK007/jiuan.git同步源 5.git push origin master同步到远程仓库 6同步到本地 git pull
+4.git pull 拉取 通报远程仓库
