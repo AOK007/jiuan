@@ -7,3 +7,4 @@
 7.linuxdeploy 安装bt sudo apt-get install python-setuptools && Pip install Pillow 宝塔apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh  mysql注意(usermod -a -G aid_inet,aid_net_raw mysql)卸载宝塔wget http://download.bt.cn/install/bt-uninstall.sh 执行 sh bt-uninstall.sh
 
 8.wx 3575.5
+9.linux deploy 挂载内存卡 /sdcard  /mnt/sdcard
