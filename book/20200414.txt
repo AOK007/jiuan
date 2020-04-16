@@ -1,0 +1,5 @@
+1.xshell 连接termux 1.pkg install openssh 2.xshell生成秘钥.导入手机/data/data/com.termux/files/home/.ssh/authorized_keys 替换 3.pc端选择8022端口连接.输入设置秘钥的密码登录.（whoami查询用户名）（passwd设置密码）
+2.安装python3 (pkg install python)
+3.安装数据库 pkg install mariadb（如果安装失败可能是因为没有名为 my.cnf.d 的目录cd /data/data/com.termux/files/usr/etc）mysqld启动服务mysql进入.创建一个可远程登录的用户CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+4.termux ssh连接PC ssh -p22 username@192.168.1.2
+5.LG今天完成飞升，修炼以后慢慢补，这样队伍好组合。
