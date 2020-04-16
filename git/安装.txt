@@ -1,0 +1,3 @@
+termux : pkg install git  复制秘钥到/data/data/com.termux/files/home/.ssh/authorized_keys
+linux deploy 自带 22
+linux 自带 22

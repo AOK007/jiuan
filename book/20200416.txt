@@ -1,8 +1,8 @@
-1.´´½¨ÓÃ»§CREATE USER 'name'@'%'IDENT IFIED BY 'pwd';mysqlÊÚÈ¨GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' WITH »Ø³µGRANT OPTION;mysqlµÇÂ¼´íÎóµÄÓÃmysql h 127.0.0.1 -uname -p ½øÈëÈ»ºómysqlÆô¶¯¾ÍºÃmysqld_safe -u root &ºóÌ¨Ò»ÆğÔËĞĞ
-2.Ã»ÓĞrootµÄtermux pkg install proot Ö´ĞĞ termux-chroot ²é¿´µ±Ç°ÓÃ»§whoamiÉèÖÃÃÜÂëpasswd °²×°ssh pkg install ssh PCÉú³Éksyµ¼Èëcd ~/.ssh cp /sdcard/id_rsa.pub ./ cat id_rsa.pub >> authorized_keys
-3.pkg install mariadb°²×°Ê§°Ü¿ÉÄÜÊÇÒòÎªÃ»ÓĞÃûÎª my.cnf.d µÄÄ¿Â¼
+ï»¿1.åˆ›å»ºç”¨æˆ·CREATE USER 'name'@'%'IDENT IFIED BY 'pwd';mysqlæˆæƒGRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' WITH å›è½¦GRANT OPTION;mysqlç™»å½•é”™è¯¯çš„ç”¨mysql h 127.0.0.1 -uname -p è¿›å…¥ç„¶åmysqlå¯åŠ¨å°±å¥½mysqld_safe -u root &åå°ä¸€èµ·è¿è¡Œ
+2.æ²¡æœ‰rootçš„termux pkg install proot æ‰§è¡Œ termux-chroot æŸ¥çœ‹å½“å‰ç”¨æˆ·whoamiè®¾ç½®å¯†ç passwd å®‰è£…ssh pkg install ssh PCç”Ÿæˆksyå¯¼å…¥cd ~/.ssh cp /sdcard/id_rsa.pub ./ cat id_rsa.pub >> authorized_keys
+3.pkg install mariadbå®‰è£…å¤±è´¥å¯èƒ½æ˜¯å› ä¸ºæ²¡æœ‰åä¸º my.cnf.d çš„ç›®å½•
 4.aid  ssh u0_a201@192.168.1.6 -p8022
-5.linuxdeploy °²×°mysql apt-get install mariadb-client apt-get install mariadb-server ÅäÖÃvi /etc/mysql/my.cnf
-6.GPG ´íÎó£ºhttps://repo.fdzh.org/chrome/deb stable Release: ÏÂÁĞÇ©ÃûÎŞĞ§£ºapt-key adv --keyserver keyserver.ubuntu.com --recv-keys(´íÎóµÄÇ©Ãû)linuxdeploy»¹ÊÇ×°²»ÉÏmariadb?
-7.linuxdeploy °²×°bt sudo apt-get install python-setuptools && Pip install Pillow ±¦Ëşapt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh  mysql×¢Òâ(usermod -a -G aid_inet,aid_net_raw mysql)Ğ¶ÔØ±¦Ëşwget http://download.bt.cn/install/bt-uninstall.sh Ö´ĞĞ sh bt-uninstall.sh
+5.linuxdeploy å®‰è£…mysql apt-get install mariadb-client apt-get install mariadb-server é…ç½®vi /etc/mysql/my.cnf
+6.GPG é”™è¯¯ï¼šhttps://repo.fdzh.org/chrome/deb stable Release: ä¸‹åˆ—ç­¾åæ— æ•ˆï¼šapt-key adv --keyserver keyserver.ubuntu.com --recv-keys(é”™è¯¯çš„ç­¾å)linuxdeployè¿˜æ˜¯è£…ä¸ä¸Šmariadb?
+7.linuxdeploy å®‰è£…bt sudo apt-get install python-setuptools && Pip install Pillow å®å¡”apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh  mysqlæ³¨æ„(usermod -a -G aid_inet,aid_net_raw mysql)å¸è½½å®å¡”wget http://download.bt.cn/install/bt-uninstall.sh æ‰§è¡Œ sh bt-uninstall.sh
 

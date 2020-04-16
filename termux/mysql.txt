@@ -1,0 +1,3 @@
+﻿pkg install mariadb
+pkg install vim
+pkg install git

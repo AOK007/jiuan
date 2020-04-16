@@ -1,5 +1,5 @@
-1.xshell Á¬½Ótermux 1.pkg install openssh 2.xshellÉú³ÉÃØÔ¿.µ¼ÈëÊÖ»ú/data/data/com.termux/files/home/.ssh/authorized_keys Ìæ»» 3.pc¶ËÑ¡Ôñ8022¶Ë¿ÚÁ¬½Ó.ÊäÈëÉèÖÃÃØÔ¿µÄÃÜÂëµÇÂ¼.£¨whoami²éÑ¯ÓÃ»§Ãû£©£¨passwdÉèÖÃÃÜÂë£©
-2.°²×°python3 (pkg install python)
-3.°²×°Êı¾İ¿â pkg install mariadb£¨Èç¹û°²×°Ê§°Ü¿ÉÄÜÊÇÒòÎªÃ»ÓĞÃûÎª my.cnf.d µÄÄ¿Â¼cd /data/data/com.termux/files/usr/etc£©mysqldÆô¶¯·şÎñmysql½øÈë.´´½¨Ò»¸ö¿ÉÔ¶³ÌµÇÂ¼µÄÓÃ»§CREATE USER 'username'@'%' IDENTIFIED BY 'password';
-4.termux sshÁ¬½ÓPC ssh -p22 username@192.168.1.2
-5.LG½ñÌìÍê³É·ÉÉı£¬ĞŞÁ¶ÒÔºóÂıÂı²¹£¬ÕâÑù¶ÓÎéºÃ×éºÏ¡£
+ï»¿1.xshell è¿æ¥termux 1.pkg install openssh 2.xshellç”Ÿæˆç§˜é’¥.å¯¼å…¥æ‰‹æœº/data/data/com.termux/files/home/.ssh/authorized_keys æ›¿æ¢ 3.pcç«¯é€‰æ‹©8022ç«¯å£è¿æ¥.è¾“å…¥è®¾ç½®ç§˜é’¥çš„å¯†ç ç™»å½•.ï¼ˆwhoamiæŸ¥è¯¢ç”¨æˆ·åï¼‰ï¼ˆpasswdè®¾ç½®å¯†ç ï¼‰
+2.å®‰è£…python3 (pkg install python)
+3.å®‰è£…æ•°æ®åº“ pkg install mariadbï¼ˆå¦‚æœå®‰è£…å¤±è´¥å¯èƒ½æ˜¯å› ä¸ºæ²¡æœ‰åä¸º my.cnf.d çš„ç›®å½•cd /data/data/com.termux/files/usr/etcï¼‰mysqldå¯åŠ¨æœåŠ¡mysqlè¿›å…¥.åˆ›å»ºä¸€ä¸ªå¯è¿œç¨‹ç™»å½•çš„ç”¨æˆ·CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+4.termux sshè¿æ¥PC ssh -p22 username@192.168.1.2
+5.LGä»Šå¤©å®Œæˆé£å‡ï¼Œä¿®ç‚¼ä»¥åæ…¢æ…¢è¡¥ï¼Œè¿™æ ·é˜Ÿä¼å¥½ç»„åˆã€‚
