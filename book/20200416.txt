@@ -1,8 +1,8 @@
-﻿1.创建用户CREATE USER 'name'@'%'IDENT IFIED BY 'pwd';mysql授权GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' WITH 回车GRANT OPTION;mysql登录错误的用mysql h 127.0.0.1 -uname -p 进入然后mysql启动就好mysqld_safe -u root &后台一起运行
+﻿1.创建用户CREATE USER 'name'@'%'IDENTIFIED BY 'pwd';mysql授权GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' IDENTIFIED BY 'PASSWD';mysql登录错误的用mysql h 127.0.0.1 -uname -p 进入然后mysql启动就好mysqld_safe -u root &后台一起运行
 2.没有root的termux pkg install proot 执行 termux-chroot 查看当前用户whoami设置密码passwd 安装ssh pkg install ssh PC生成ksy导入cd ~/.ssh cp /sdcard/id_rsa.pub ./ cat id_rsa.pub >> authorized_keys
 3.pkg install mariadb安装失败可能是因为没有名为 my.cnf.d 的目录
 4.aid  ssh u0_a201@192.168.1.6 -p8022
 5.linuxdeploy 安装mysql apt-get install mariadb-client apt-get install mariadb-server 配置vi /etc/mysql/my.cnf
 6.GPG 错误：https://repo.fdzh.org/chrome/deb stable Release: 下列签名无效：apt-key adv --keyserver keyserver.ubuntu.com --recv-keys(错误的签名)linuxdeploy还是装不上mariadb?
-7.linuxdeploy 安装bt sudo apt-get install python-setuptools && Pip install Pillow 宝塔apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh  mysql注意(usermod -a -G aid_inet,aid_net_raw mysql)卸载宝塔wget http://download.bt.cn/install/bt-uninstall.sh 执行 sh bt-uninstall.sh
+7.linuxdeploy 安装bt sudo apt-get install python-setuptools && Pip install Pillow 宝塔apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh  mysql注意(usermod -a -G aid_inet,aid_net_raw mysql)卸载宝塔wget http://download.bt.cn/install/bt-uninstall.sh 执行 sh bt-uninstall.sh 
 
