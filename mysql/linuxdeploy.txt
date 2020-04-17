@@ -1,1 +1,18 @@
 ﻿宝塔安装
+﻿create database database_name;创建数据库
+﻿drop database database_name;删除数据库
+﻿create table table-name (name char(8)not null );创建表
+﻿mysql -u root 进入数据库
+﻿show databases; 列出所有数据库
+﻿use name ; 进入其中一个数据库
+﻿show tables;列出所有表
+﻿describe name 查看表信息
+﻿select * from name 查询表
+﻿select * from name where type ='name';条件where查询
+﻿insert table-name (type) values ('那');增加一行数据
+﻿alter table ccc02 add column id int(11) not null;增加一列
+﻿update ccc02 set name='张生' where id=0;更新表
+﻿delete from ccc02 where id=0;条件删除
+﻿drop table ccc02;删除表
+﻿alter table id drop id;删除id表id列
+﻿alter table id change sex mobile char(12);修改列名称 数据类型
