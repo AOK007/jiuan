@@ -1,1 +1,2 @@
 ﻿1.linux deploy bt 启动/etc/init.d/bt start停止/etc/init.d/bt stop
+2.jdk apt install openjdk-11-jdk
