@@ -3,3 +3,7 @@ mysql
 pip
 python
 scrapyd
+node
+curl
+nginx
+php

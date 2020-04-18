@@ -1,0 +1,12 @@
+﻿yum install node
+mkdir /usr/local/node
+cd /usr/local/node
+wget https://npm.taobao.org/mirrors/node/v4.4.7/node-v4.4.7-linux-x64.tar.gz
+ls -l
+tar -zxvf node-v4.4.7-linux-x64.tar.gz
+pwd
+ls
+ln -s /usr/local/node/node-v4.4.7-linux-x64/bin/npm /usr/local/bin/npm
+$ 
+ln -s /usr/local/node/node-v4.4.7-linux-x64/bin/node /usr/local/bin/node
+
