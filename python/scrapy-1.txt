@@ -1,0 +1,3 @@
+﻿scrapy startproject shuju
+cd shuju
+scrapy genspider baidu baidu.com

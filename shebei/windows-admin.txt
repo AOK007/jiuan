@@ -1,0 +1,22 @@
+﻿python pycharm intellij
+jdk 
+vm
+elk
+xshell
+navicat
+filezilla
+wechat wechatproject
+autodesk
+phpstudy
+androidstudy
+denmon
+wps
+AndroidKiller
+Notepad++
+有道云笔记
+Google Chrome
+Maya 2019
+git
+anaconda3
+向日葵
+花生壳

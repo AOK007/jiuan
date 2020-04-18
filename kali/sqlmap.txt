@@ -1,0 +1,2 @@
+﻿sqlmap
+sqlmap.py -d”mysql://admin:admin@192.168.21.17:3306/testdb” -f –banner –dbs–users

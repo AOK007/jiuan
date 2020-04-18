@@ -1,0 +1,1 @@
+﻿hydra -L username.txt -P password.txt mysql://目标IP:mysql端口号

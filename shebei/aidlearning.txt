@@ -1,0 +1,5 @@
+﻿openjdk-11
+mysql
+pip
+python
+scrapyd

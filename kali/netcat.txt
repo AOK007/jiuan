@@ -1,0 +1,12 @@
+﻿聊天
+nc -l 1567 server
+nc 192.168.1.1 1567 client
+文件传输
+nc -l 1567 < file.txt server
+nc 192.168.1.1 1567 >file.txt client
+目录传输
+tar -cvf – dir_name | nc -l 1567 server
+nc -n 192.168.1.1 1567 | tar -xvf - client
+克隆硬盘
+dd if=/dev/sda | nc -l 1567 server
+nc -n 192.168.1.1 1567 | dd of=/dev/sda client

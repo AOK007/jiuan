@@ -1,0 +1,14 @@
+﻿openjdk-11
+mysql
+pip
+python
+scrapyd
+nginx
+nmap
+hydra
+sqlmap
+msf
+netcat
+ssh
+vnc
+git

