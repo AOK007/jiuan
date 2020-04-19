@@ -1,9 +1,44 @@
-﻿openjdk-11
-mysql
-pip
-python
-scrapyd
-node
-curl
-nginx
-php
+﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
+deb http://mirrors.163.com/debian/ buster main non-free contrib
+apt-get update && apt-get update
+apt-get install openjdk-11-jdk
+apt install apache2
+apt install default-mysql-server
+pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）
+apt-get install node
+apt-get install curl
+apt-get install php
+apt-get install netcat
+apt-get install nmap
+apt-get install hydra
+apt-get install sqlmap
+apt-get install metasploit-framework
+
+用8888端口代替上传FTP
+1. apt-get install apache2
+2. cd /
+3.  /etc/init.d/apache2 start
+apache2修改端口，在document可以快速找到下列文件并修改:
+1， 修改 vi /etc/apache2/ports.conf 将
+Listen 80
+改为自己需要的端口，如
+Listen 9321
+2，修改vi /etc/apache2/sites-enabled/000-default.conf 将第一行的
+<VirtualHost *:80>
+改为自己需要的端口
+<VirtualHost *:9321>
+3，在document打开文件 vi /etc/apache2/apache2.conf
+在最后添加：
+ServerName localhost:9321
+nginx:
+1,apt-get install nginx
+2,修改端口
+/etc/nginx/sites-enabled/default
+listen 80 default_server;
+# 在document 里面修改自己需要的端口号
+listen 9322 default_server;
+listen [::]:9322 default_server;
+
+3,etc/init.d/nginx reload
+4,etc/init.d/nginx start
+5,etc/init.d/nginx status

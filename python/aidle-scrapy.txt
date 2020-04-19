@@ -1,7 +1,8 @@
-﻿
-install libxml2 libxml2-dev libxslt libxslt-dev
+﻿apt install libxml2-dev 
+apt install libxslt-dev
+pip3 install lxml
+apt install openssl-dev 
+apt install openssl-tool(查看是否有)
+apt install libffi-dev
 pip install lxml
-install openssl openssl-dev openssl-tool
-openssl  openssl-dev openssl-tool(查看是否有)
-install libffi libffi-dev
-pip install scrapy
+pip install scrapyd

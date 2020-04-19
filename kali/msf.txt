@@ -1,4 +1,37 @@
-﻿msfconsole
+﻿apt-get install metasploit-framework（直接安装）
+1.curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb> msfinstall
+2.chmod 755 msfinstall
+3../msfinstall
+4.等它自动安装完毕，然后先不要启动，目前最新版的这个msf会问你要不要用自带到database，你想用自带到数据库就回车，想用自己到数据库就输入no回车
+5.msfconsole测试是否安装成功
+git安装
+git clone --depth=1  git://github.com/rapid7/metasploit-framework metasploit
+cd ./metasploit
+设置密码
+passwd -d postgres 
+提示密码过期信息已更改
+create user msf with password 'msfadmin' nocreatedb;
+进入数据库管理
+psql -U postgres -h 127.0.0.1
+创建密码是msf的用户msf
+create user msf with password 'msf' nocreatedb;
+创建数据库
+create database msf with owner=msf;
+在msf安装目录下的 config目录下,即/usr/share/metasploit-framework/config$ 创建database.yml文件
+production:  
+   adapter: postgresql  
+   database: msf  
+   username: msf  
+   password: msf   #我在上一步创建用户的时候  设置的密码
+   host: 127.0.0.1  
+   port: 5432  
+   pool: 75  
+   timeout: 5
+db_connect -y /usr/share/metasploit-framework/config/database.yml
+db_status
+提示postgresql connected to msf
+连接成功!!
+msfconsole
 show exploits
 show payloads
 show auxiliary
