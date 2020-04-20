@@ -10,3 +10,15 @@ ln -s /usr/local/node/node-v4.4.7-linux-x64/bin/npm /usr/local/bin/npm
 $ 
 ln -s /usr/local/node/node-v4.4.7-linux-x64/bin/node /usr/local/bin/node
 
+git clone https://github.com/nodejs/node.git
+ chmod -R 755 node
+cd node
+ ./configure
+make
+make install
+apt-get install nodejs
+apt-get install npm
+更新npm
+npm install --global npm@latest
+npm uninstall -g npm
+npm install electron -g

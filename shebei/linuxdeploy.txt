@@ -12,3 +12,5 @@ netcat
 ssh
 vnc
 git
+node
+npm

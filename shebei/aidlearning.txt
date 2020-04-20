@@ -4,16 +4,18 @@ apt-get update && apt-get update
 apt-get install openjdk-11-jdk
 apt install apache2
 apt install default-mysql-server
-pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）
+pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）（）
 apt-get install node
 apt-get install curl
-apt-get install php
-apt-get install netcat
-apt-get install nmap
-apt-get install hydra
-apt-get install sqlmap
-apt-get install metasploit-framework
-
+apt-get install openssh-clients(src)
+apt-get install php-fpm
+apt-get install netcat（）
+apt-get install nmap（）
+apt-get install hydra（）
+apt-get install sqlmap（）
+apt-get install metasploit-framework（）
+npm
+node
 用8888端口代替上传FTP
 1. apt-get install apache2
 2. cd /

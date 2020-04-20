@@ -3,4 +3,5 @@ PHP启动：/etc/init.d/php7.3-fpm start
 apache2启动：/etc/init.d/apache2 start
 mysql启动：/etc/init.d/mysqld start
 ssh启动： sshd
- /etc/init.d/mysqld start && /etc/init.d/apache2 start && /etc/init.d/php7.3-fpm start
+cd /etc/php/7.3/fpm/ vi php.ini
+ /etc/init.d/mysql start && /etc/init.d/apache2 start && /etc/init.d/php7.3-fpm start
