@@ -1,8 +1,5 @@
-﻿windows
+windows
+C:\Users\Administrator\anaconda3
 conda list 命令检验conda是否安装成功
 conda install -c conda-forge scrapy 命令安装scrapy框架
-linux
-pip install scrapy
-scrapy startproject shuju
-cd shuju
-scrapy genspider baidu baidu.com
+

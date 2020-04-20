@@ -1,0 +1,19 @@
+Firefox
+VMware 
+Xshell 6
+filezilla
+idea64
+pycharm64
+百度网盘
+高速浏览器
+微信开发者工具
+有道云笔记
+anaconda
+https://www.anaconda.com/distribution/
+git
+jdk
+python
+Tableau
+向日葵
+花生壳
+蒲公英

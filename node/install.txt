@@ -1,4 +1,8 @@
-﻿yum install node
+﻿windows
+http://nodejs.cn/download/(安装的时候选择wiki开头就全部配置好了)
+环境变量
+linux
+yum install node
 mkdir /usr/local/node
 cd /usr/local/node
 wget https://npm.taobao.org/mirrors/node/v4.4.7/node-v4.4.7-linux-x64.tar.gz
