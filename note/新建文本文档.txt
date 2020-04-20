@@ -1,2 +1,0 @@
-﻿https://s3.amazonaws.com/firmwaredownloads/update_kindle_voyage_5.12.4.bin
-21:18 2020/4/18
