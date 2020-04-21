@@ -1,16 +1,19 @@
-﻿openjdk-11
-mysql
-pip
-python
-scrapyd
-nginx
-nmap
-hydra
-sqlmap
-msf
-netcat
+﻿apt-get install openjdk-11
+apt-get install mysql
+apt-get install pip
+apt-get install python
+apt-get install scrapyd
+apt-get install nginx
+apt-get install apache2
+apt-get install nmap
+apt-get install hydra
+apt-get install sqlmap
+apt-get install msf
+apt-get install netcat
 ssh
 vnc
-git
-node
-npm
+apt-get install git
+apt-get install node
+apt-get install npm
+ngrok
+配置
