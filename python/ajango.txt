@@ -1,0 +1,6 @@
+linux
+django-admin startproject one(项目名)
+./manage.py runserver 0.0.0.0:8000(外网访问）
+windows
+django-admin startproject one
+python manage.py runserver 8000

@@ -1,4 +1,7 @@
 ﻿宝塔安装
+刷新
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb
+apt-get install -y default-mysql-server
 /etc/init.d/mysql start
 mysql -u root
 创建用户CREATE USER 'name'@'%'IDENTIFIED BY 'pwd';

@@ -1,6 +1,7 @@
 ﻿apt install libxml2-dev 
 apt install libxslt-dev
-pip3 install lxml
+apt install python-dev
+pip install lxml
 apt install openssl-dev 
 apt install openssl-tool(查看是否有)
 apt install libffi-dev

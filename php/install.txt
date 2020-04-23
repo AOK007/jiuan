@@ -1,4 +1,16 @@
 ﻿apt-get install php
 linux deploy启动
+ apt-get install php-gd 
+ apt-get install php-ldap
+  apt-get install php-odbc
+  apt-get install php-pear
+  apt-get install php-xml
+ apt-get install php-xmlrpc
+  apt-get install php-mbstring 
+ apt-get install php-snmp
+  apt-get install php-soap 
+ apt-get install curl
+install curl-devel
+install php-mysql
 /etc/init.d/php7.3-fpm start
 修改配置文件

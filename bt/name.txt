@@ -1,0 +1,3 @@
+apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && bash install.sh安装
+
+/etc/init.d/bt default（查看用户）
