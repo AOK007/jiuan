@@ -1,3 +1,44 @@
-﻿mysql
-python
-ssh
+﻿export EDITOR=vi
+apt edit-sources（换源）
+pkg install termux-tools
+手机没有root
+利用proot工具来模拟某些需要root的环境
+pkg install proot
+然后终端下面输入:
+termux-chroot
+手机已经root
+安装tsu,这是一个su的termux版本,用来在termux上替代su:
+pkg install tsu
+然后终端下面输入:
+tsu
+termux-setup-storage(读取内存卡)
+apt-get install openssh
+1.安装ssh等软件
+ # apt update //首次必须执行
+ # apt install openssh emacs nmap python-dev clang
+2.配置ssh
+# ssh-keygen //pc端执行
+注意：拷贝pc端~/.ssh/id_rsa.pub内容到android端~/.ssh/authorized_keys
+cd ~/.ssh
+cp /sdcard/id_rsa.pub ./
+cat id_rsa.pub >> authorized_keys
+whoami 手机查看当前的用户名
+# sshd & //android端执行
+# chmod 715 ~/.ssh  
+# chmod 664 ~/.ssh/authorized_keys  
+# chmod 600 id_rsa  id_rsa.pub
+3./etc/profile
+ alias mx='ssh $(whoami)@10.100.29.37 -p 8022'
+ 登陆:# mx
+4.上传下载文件
+# scp -P 8022 $(whoami)@10.100.29.37:~/test .
+5.termux之快捷键
+音量-键  + L                清除屏幕内容
+音量-键  + C                终止当前操作
+音量-键  + D                 退出当前会话session
+音量+键 + D                      Tab键（可自动补全命令或文件名）
+音量+键 + W                      方向键 上（可显示前一条命令）
+音量+键 + S                      方向键 下（可显示后一条命令）
+音量+键 + A                      方向键 左（可左移动光标）
+音量+键 + D                      方向键 右（可右移动光标）
+音量+键 + Q                      显示或关闭扩展键（ESC、插入链接CTR、ALT、TAB、-、/、|以及左滑扩展键一栏可切换到全功能支持手机输入法的输入框）
