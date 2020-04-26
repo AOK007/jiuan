@@ -1,7 +1,16 @@
 ﻿windows
+在python文件目录下Scripts
+%APPDATA%创建pip.ini文件
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host = https://pypi.tuna.tsinghua.edu.cn  # trusted-host 此参数是为了避免麻烦，否则使用的时候可能会提示不受信任
+在环境变量 path 加上Scripts路径C:\Python38\Scripts
 conda list 命令检验conda是否安装成功
 conda install -c conda-forge scrapy 命令安装scrapy框架
 linux
+pip install --upgrade pip 命令进行pip版本升级。
+pip install --upgrade setuptools 命令进行setuptools 版本升级
 pip install scrapy
 scrapy startproject shuju
 cd shuju

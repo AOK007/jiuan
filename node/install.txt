@@ -26,3 +26,8 @@ apt-get install npm
 npm install --global npm@latest
 npm uninstall -g npm
 npm install electron -g
+npm install gulp -g (gulp全局安装)
+npm init
+npm install gulp --save-dev(项目记录安装包)
+npm install gulp-cssnano --save-dev(cssnano加工css)
+npm install gulp-rename --save-dev(改名css) gulp css执行
