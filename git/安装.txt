@@ -1,3 +1,22 @@
 termux : pkg install git  复制秘钥到/data/data/com.termux/files/home/.ssh/authorized_keys
 linux deploy 自带 22
 linux 自带 22
+1.生成秘钥GPG
+gpg --full-generate-key
+或者
+1.gpg --default-new-key-algo rsa4096 --gen-key
+设置用户邮箱
+输入一个安全的密码短语。参考案例
+目录‘/home/ccc01/.gnupg
+2.$ gpg --list-secret-keys --keyid-format LONG
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot 
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+粘贴以下文本，替换为您要使用的GPG密钥ID。在此示例中，GPG密钥ID为3AA5C34371567BD2：
+3.$ gpg --armor --export 3AA5C34371567BD2
+复制您的GPG密钥，以开头-----BEGIN PGP PUBLIC KEY BLOCK-----和结尾-----END PGP PUBLIC KEY BLOCK-----。
+将GPG密钥添加到您的GitHub帐
+生成秘钥ssh
+ssh-keygen -t rsa -b 4096 -C "www8899878@163.com"
