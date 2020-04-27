@@ -42,3 +42,4 @@ span标签内容直接一个/就OK
         ter2 = response.xpath("//div[@class='box hover-shine']//a/text()").extract()
         # ter3 = response.xpath("//div[@class='replyList']//a/text()").extract()
         print(ter2,ter1)
+测试一下

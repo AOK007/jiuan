@@ -9,7 +9,7 @@ mysql授权GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' IDENTIFIED BY 'PASSWD';
 select user,host from mysql.user;（查询数据库用户）
 CREATE DATABASE ccc01 ;database_name;创建数据库
 ﻿drop database database_name;删除数据库
-﻿CREATE TABLE ccc01;table-name (name char(8)not null );创建表
+CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿mysql -u root 进入数据库
 ﻿show databases; 列出所有数据库
 ﻿use name ; 进入其中一个数据库
