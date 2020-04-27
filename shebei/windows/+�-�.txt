@@ -1,0 +1,2 @@
+dir 列出文件类似linux ls
+notepad类似linux vi

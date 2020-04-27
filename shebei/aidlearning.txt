@@ -44,3 +44,12 @@ listen [::]:9322 default_server;
 3,etc/init.d/nginx reload
 4,etc/init.d/nginx start
 5,etc/init.d/nginx status
+ssh
+apt-get  install openssh-server
+cd /etc/ssh
+vi sshd_config
+Port 9696
+ListenAddress 0.0.0.0
+PermitRootLogin yes
+PrintMotd yes
+PasswordAuthentication yes
