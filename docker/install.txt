@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 windows
 下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
 点击 Docker QuickStart 图标来启动 Docker Toolbox 终端。
@@ -29,3 +33,39 @@ wget -qO- https://get.docker.com/ | sh
 应用新的组成员身份：su - ${USER}
 配置国内镜像 新版的 Docker 使用 /etc/docker/daemon.json来配置 Daemon。"http://hub-mirror.c.163.com"
 systemctl restart docker
+<<<<<<< HEAD
+=======
+=======
+windows
+下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
+点击 Docker QuickStart 图标来启动 Docker Toolbox 终端。
+win10
+现在 Docker 有专门的 Win10 专业版系统的安装包，需要开启Hyper-V。
+最新版 Toolbox 下载地址： https://www.docker.com/get-docker
+点击 Download Desktop and Take a Tutorial，并下载 Windows 的版本，如果你还没有登录，会要求注册登录：
+控制面板 程序-启用windows或关闭功能需要开启Hyper-V。要重启
+镜像加速
+Windows 10
+对于使用 Windows 10 的系统，在系统右下角托盘 Docker 图标内右键菜单选择 Settings，打开配置窗口后左侧导航菜单选择 Daemon。在 Registrymirrors 一栏中填写加速器地址 https://registry.docker-cn.com ，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了
+debian linux
+Docker 的旧版本被称为 docker，docker.io 或 docker-engine，如果已安装，请卸载它们：
+ apt-get remove docker docker-engine docker.io containerd runc
+安装 apt 依赖包，用于通过 HTTPS 来获取仓库。
+ apt-get install  apt-transport-https  
+apt-get install   ca-certificates 
+apt-get install  curl 
+ apt-get install  gnupg2 
+ apt-get install  software-properties-common
+添加 Docker 的官方 GPG 密钥：（国内源）
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg |  apt-key add -
+# 向 source.list 中添加 Docker CE 软件源
+add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/debian $(lsb_release -cs) stable"
+apt-get update
+apt-get install docker-ce（安装docker）
+wget -qO- https://get.docker.com/ | sh
+配置用户usermod -aG docker ${USER}
+应用新的组成员身份：su - ${USER}
+配置国内镜像 新版的 Docker 使用 /etc/docker/daemon.json来配置 Daemon。"http://hub-mirror.c.163.com"
+systemctl restart docker
+>>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
