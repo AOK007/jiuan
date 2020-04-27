@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 操作excel
 创建一个工作薄：wb = openpyxl.Workbook()
 新增一个sheet表单：wb.create_sheet('test_case')
@@ -38,6 +41,8 @@ for cases in list(sh.rows)[1:]:
     case_data = cases[2].value
     print(case_excepted,case_data)
 # 关闭工作薄
+<<<<<<< HEAD
+=======
 =======
 操作excel
 创建一个工作薄：wb = openpyxl.Workbook()
@@ -79,4 +84,5 @@ for cases in list(sh.rows)[1:]:
     print(case_excepted,case_data)
 # 关闭工作薄
 >>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 wb.close()

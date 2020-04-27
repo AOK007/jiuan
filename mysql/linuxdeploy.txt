@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 ﻿宝塔安装
 刷新
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb
@@ -24,6 +27,8 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿delete from ccc02 where id=0;条件删除
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
+<<<<<<< HEAD
+=======
 =======
 ﻿宝塔安装
 刷新
@@ -51,4 +56,5 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
 >>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 ﻿alter table id change sex mobile char(12);修改列名称 数据类型

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 windows
 下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
 点击 Docker QuickStart 图标来启动 Docker Toolbox 终端。
@@ -30,6 +33,8 @@ wget -qO- https://get.docker.com/ | sh
 应用新的组成员身份：su - ${USER}
 配置国内镜像 新版的 Docker 使用 /etc/docker/daemon.json来配置 Daemon。"http://hub-mirror.c.163.com"
 systemctl restart docker
+<<<<<<< HEAD
+=======
 =======
 windows
 下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
@@ -63,3 +68,4 @@ wget -qO- https://get.docker.com/ | sh
 配置国内镜像 新版的 Docker 使用 /etc/docker/daemon.json来配置 Daemon。"http://hub-mirror.c.163.com"
 systemctl restart docker
 >>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db

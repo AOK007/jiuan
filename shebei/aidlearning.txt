@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 ﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 deb http://mirrors.163.com/debian/ buster main non-free contrib
 apt-get update && apt-get update
@@ -53,6 +56,8 @@ Port 9696
 ListenAddress 0.0.0.0
 PermitRootLogin yes
 PrintMotd yes
+<<<<<<< HEAD
+=======
 =======
 ﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 deb http://mirrors.163.com/debian/ buster main non-free contrib
@@ -109,4 +114,5 @@ ListenAddress 0.0.0.0
 PermitRootLogin yes
 PrintMotd yes
 >>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
+>>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 PasswordAuthentication yes
