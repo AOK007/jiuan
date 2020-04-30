@@ -1,0 +1,11 @@
+主从
+事务
+增加
+删除detete
+修改
+#查询 
+select * from table
+1.关系查询
+select *from table where (table_字段='条件')
+聚合
+优化

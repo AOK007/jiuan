@@ -1,0 +1,37 @@
+语法{% tag%}
+{%for 变量名 in 列表%}
+语句
+{%empty}
+<>注释<>
+{%endfor%}
+语句（）
+{forloop.counter}循环计数1开始可以加0那就是从0开始
+{forloop.revcounter}循环倒数计数开始
+{forloop.first}是否第一个布尔值
+{forloop.last}是否最后一个布尔值
+字典
+属性
+单行注释{#注释内容#}
+多行注释{ %comment%}中间内容{%endcomment%}
+乘除 {%widthratio 数 分母 分子%}
+整除{%num|divisibleby:2%}
+过滤器{var|过滤器}作用在变量显示前修改
+add {var | add:5}加5
+add {var | add:-5}减5
+HTML转义
+模板可以继承换整为零
+#block 
+第一次代表规划
+第二次代表填充
+第三次默认填充并覆盖（不想覆盖加block .super）super调用父类
+{%block xxx%}
+code
+{%endblock%}
+#extends 继承
+{%extends'父模板路径'%}
+#include
+{include'模板文件'}将页面做一部分嵌入其他页面
+{%load static%}引入静态资源
+<link rel="stylesheet"href={%static 'css/文件名.css'%}>在调试模式可以使用关了不行
+<meta name=”viewport” content=”width=device-width,initial-scale=1.0” />移动端设置显示
+

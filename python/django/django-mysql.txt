@@ -1,0 +1,14 @@
+goods模块
+1.goods_table商品表
+name mobile address age sex in_timenumber goods_spu_id
+2.goods_spu
+id 名称 详情
+3.goods_list_table商品列表表
+id goodsid index
+4.种类表goods_type
+id name logo image
+5.商品图片表goods_img
+id name goodsid
+一对多：models.ForeignKey(其他表)
+多对多：models.ManyToManyField(其他表)
+一对一：models.OneToOneField(其他表)绑定表

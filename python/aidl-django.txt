@@ -1,3 +1,0 @@
-﻿pip install django
-python 
-import django

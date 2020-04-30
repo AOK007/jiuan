@@ -1,0 +1,239 @@
+vue部分
+新建一个组件User.vue
+在router/index.js中配置User路由
+在App.vue中应用路由/和/user
+djang部分1.# 运行所有主机访问
+ALLOWED_HOSTS = ['*']
+允许所有主机访问ALLOWED_HOSTS = ['*']
+注释掉'django.middleware.csrf.CsrfViewMiddleware',
+语言改成中文LANGUAGE_CODE = 'zh-Hans'
+时区改为上海TIME_ZONE = 'Asia/Shanghai'
+USE_TZ = False
+运行项目python manage.py runserver
+静态文件改为前后端分离的STATIC_URL = '/api/static/'
+配置URL路由 总路由
+from django.contrib import admin
+from django.urls import path, include
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	path('api/', include("mysite.urls"))
+]
+子路由
+from django.urls import path
+from mysite import views
+urlpatterns = [
+	path("test/", views.test)
+]
+视图函数
+from django.http import JsonResponse
+def test(request):
+	return JsonResponse({"status": 0, "message": "this is message"})
+浏览器中访问http://127.0.0.1:8000/api/test/
+初探django 跨域代理 并使用axios请求django数据
+安装axiosnpm install axios --save
+在main.js中注册axios
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import axios from 'axios'
+
+Vue.use(axios);
+Vue.config.productionTip = false
+Vue.prototype.$axios = axios
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+在User.vue中接收后端传过来的数据
+<template>
+	<div id="user">
+		{ { page_info } }
+	</div>
+</template>
+<script>
+	export default {
+		name: "User",
+		data(){
+			return {
+				page_info: "this User page"
+			}
+		},
+    created() {
+      this.$axios.get("/api/test/")
+        .then(response => {
+          console.log(response.data)
+        })
+    }
+	}
+</script>
+<style scoped>
+</style>
+解决跨域问题,修改config/index.js
+proxyTable: {
+  '/api': {
+    target: 'http://127.0.0.1:8000/api/', //接口域名
+    changeOrigin: true, //是否跨域
+    pathRewrite: {
+      '^/api':'' ,//需要rewrite重写的
+    }
+  }
+},
+从数据库取数据给vue渲染表格
+修改User.vue把后端传过来的数据显示出来
+<template>
+	<div id="user">
+		{ { page_info } }
+    <br />
+    { { django_message } }
+	</div>
+</template>
+<script>
+	export default {
+		name: "User",
+		data(){
+			return {
+				page_info: "this User page",
+        django_message: ""
+			}
+		},
+    created() {
+      this.$axios.get("/api/test/")
+        .then(response => {
+          this.django_message = response.data.message
+        })
+    }
+	}
+</script>
+<style scoped>
+</style>
+在models.py中创建Stu表
+from django.db import models
+
+# Create your models here.
+class Stu(models.Model):
+	id = models.IntegerField(primary_key=True,auto_created=True)
+	name = models.CharField(max_length=200)
+生成迁移文件python manage.py makemigrations
+执行迁移文件python manage.py migrate
+在models.py中注册Stu表
+from django.contrib import admin
+from . import models
+# Register your models here.
+admin.site.register(models.Stu)
+6.创建超级管理员python manage.py createsuperuser,用户名caoyang,密码Mm23456
+7.运行项目,访问127.0.0.1:8000/admin/login
+8.在views.py中返回表中数据
+from django.http import JsonResponse
+from .models import Stu
+
+# Create your views here.
+def test(request):
+	return JsonResponse({"status": 0, "message": "this is django_message"})
+
+def ret_user(request):
+	if request.method == "GET":
+		db = Stu.objects.all()
+		db = [i.name for i in db]
+		return JsonResponse({"status":0,"data":db})
+	else:
+		return JsonResponse({"status":1,"message":"you need GET method"})
+9.配置子路由path("user/",views.ret_user)
+10.访问http://127.0.0.1:8000/api/user/就能返回数据了
+11.修改前端界面User.vue
+<template>
+	<div id="user">
+		{ { page_info } }
+    <br />
+    { { django_message } }
+    <br />
+    <table>
+      <tr>
+        <th>user</th>
+      </tr>
+      <tr v-for="user in user_list" :key='user'>
+        <td>{ { user } }</td>
+      </tr>
+    </table>
+	</div>
+</template>
+<script>
+	export default {
+		name: "User",
+		data(){
+			return {
+				page_info: "this User page",
+        django_message: "",
+        user_list: [],
+			}
+		},
+    created() {
+      this.$axios.get("/api/test/")
+        .then(response => {
+          this.django_message = response.data.message
+        });
+      this.$axios.get("/api/user/")
+        .then(response => {
+          this.user_list = response.data.data
+        })
+    }
+	}
+</script>
+<style scoped>
+</style>
+12.访问http://localhost:8080/#/user即可接受到数据了
+七.django序列化json数据方便vue识别
+1.views.py中导入from django.core import serializers序列化的模块,可以将queryset转化为json
+2.修改ret_user视图函数,访问http://127.0.0.1:8000/api/user/
+def ret_user(request):
+	if request.method == "GET":
+		json = serializers.serialize("json",Stu.objects.all())
+		return JsonResponse({"status":0,"data":json})
+	else:
+		return JsonResponse({"status":1,"message":"you need GET method"})
+2.修改前端界面User.vue,访问http://localhost:8080/#/user
+<template>
+	<div id="user">
+		{ { page_info } }
+    <br />
+    { { django_message } }
+    <br />
+    <table>
+      <tr>
+        <th>id</th>
+        <th>user</th>
+      </tr>
+      <tr v-for="user in user_list" :key='user'>
+        <td>{ { user.pk } }</td>
+        <td>{ { user.fields.name } }</td>
+      </tr>
+    </table>
+	</div>
+</template>
+<script>
+	export default {
+		name: "User",
+		data(){
+			return {
+				page_info: "this User page",
+        django_message: "",
+        user_list: [],
+			}
+		},
+    created() {
+      this.$axios.get("/api/test/")
+        .then(response => {
+          this.django_message = response.data.message
+        });
+      this.$axios.get("/api/user/")
+        .then(response => {
+          this.user_list = JSON.parse(response.data.data)
+        })
+    }
+	}
+</script>
+<style scoped>
+</style>

@@ -1,0 +1,21 @@
+docker run -ti ubuntu bash（启动）
+先按，ctrl+p
+再按，ctrl+q
+绝对不能使用exit或者ctrl+d来退出，这样整个系统就退出了！！！
+docker run -it -v /AAA:/BBB ubuntu bash
+这样宿主机根目录中的AAA文件夹就映射到了容器Ubuntu中去了，两者之间能够共享；
+PS:我运行的命令
+docker run -it -v /download:/download -p 53:53 ubuntu bash
+附加常用命令：
+一、查看ubuntu版本：cat /etc/issue
+二、修改ubuntu镜像源为ubuntu：
+1、备份 cp /etc/apt/sources.list /etc/apt/sources.list.backup
+2、清空内容加入以下内容 vi /etc/apt/sources.list
+3、更新生效：apt-get update
+三、安装开启ssh运行用户远程登录
+1、安装sshd命令：apt-get install openssh-server openssh-client
+2、编辑/etc/ssh/sshd_config ，注释掉：PermitRootLogin without-password，增加PermitRootLogin yes
+3、启动命令
+service ssh start
+service ssh stop
+service ssh restart

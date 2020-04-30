@@ -1,0 +1,75 @@
+跟删改查
+get 
+update
+add
+delete
+filter(筛选符合条件的)
+exclude(筛选不符合条件的)
+添加数据
+def get_goods(request):
+    goodss = Goods.objects.all
+    for goods in goodss:
+        print(goods.all)
+        context = {}
+        return render(request, 'goods_list.html', context=context)
+def update_goods(request):
+    goods = Goods.objects.get(pk=2)
+    return HttpResponse("Goods Update Success")
+主路由
+path('user/', include('user.urls')),
+子路由
+path('index/', views.index),
+    path('get_goods/', views.get_goods),
+    path('update_goods/', views.update_goods),
+)
+搞定展示页面还有排版。还有其他功能补充
+get()：满足条件的对象
+first(): 返回查询集中的第一个对象
+last():返回查询集中的最后一个对象
+count():返回查询集中的对象个数
+exists():判断查询集中是否有数据有返回true反之false
+查询条件
+gt 大于
+lt 小于
+gte大于等于
+lte小于等于
+in 在莫个集合中
+contains 包含 相当于 sql like
+startswith 以什么开始
+endswith 以什么结束
+exact 精确
+pk=1 主键是1的
+前面加一个i 作为忽略
+istartswith忽略以什么开始的
+关系查询
+table=table.objects.filter(集合_字段='条件')
+aggregate()聚合函数的值
+Avg:平均值
+Count：数量
+Max：最大
+MIN：最小
+Sum:求和
+#F对象
+tables=table.objects.filters(字段A_lt=F（'字段B'）-10）
+for table in tables:
+priot(table.字段)
+获取字段A小于于字段B10以上的数据
+获取属性值
+一个模型不同属性运算
+支持运算符
+#Q对象
+条件封装
+tables=table.objects.filters（Q(集合_字段A_lt=2）&Q（集合_字段B_qt=2）)
+对查询条件封装，封装后逻辑运算 与 或非  &=and  |=or  ~=非
+隐性属性显性属性
+objects manage
+类 对象
+时区问题
+关闭自定义时区
+USE_TZ=False
+LANGUAGE_CODE = 'zh-hans'
+TIME_ZONE = 'Asia/shanghai'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = False
+创时区表

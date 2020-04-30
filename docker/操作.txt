@@ -1,0 +1,30 @@
+docker exec -it 容器名或容器id 进入后执行的第一个命令
+列出本机正在运行的容器
+docker container ls
+列出本机所有容器，包括已经终止运行的
+docker container ls --all
+停止一个已经在运行的容器
+docker container stop 容器名或容器id
+启动一个已经停止的容器
+docker container start 容器名或容器id
+kill掉一个已经在运行的容器
+docker container kill 容器名或容器id
+docker container rm 容器名或容器id 删除容器
+docker commit 容器名 镜像名 保存
+镜像备份与迁移
+docker save -o 保存的文件名 镜像名
+对方在拿到镜像文件后，可以通过load方法，将镜像加载到本地
+docker load -i ./centos.tar
+检索image  
+$docker search image_name  
+# 下载image  
+$docker pull image_name  
+# 列出镜像列表; 
+# -a, --all=false Show all images; --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  
+$docker images  
+# 删除一个或者多个镜像; 
+# -f, --force=false Force; --no-prune=false Do not delete untagged parents  
+$docker rmi image_name  
+# 显示一个镜像的历史; 
+# --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  
+$docker history image_name  

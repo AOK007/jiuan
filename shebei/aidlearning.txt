@@ -96,8 +96,8 @@ ServerName localhost:9321
 nginx:
 1,apt-get install nginx
 2,修改端口
-/etc/nginx/sites-enabled/default
-listen 80 default_server;
+vi /etc/nginx/sites-enabled/default
+把80端口修改listen 80 default_server;
 # 在document 里面修改自己需要的端口号
 listen 9322 default_server;
 listen [::]:9322 default_server;
@@ -107,12 +107,22 @@ listen [::]:9322 default_server;
 5,etc/init.d/nginx status
 ssh
 apt-get  install openssh-server
-cd /etc/ssh
+cd /etc/ssh （华为平板无效）
 vi sshd_config
 Port 9696
+PasswordAuthentication yes
 ListenAddress 0.0.0.0
 PermitRootLogin yes
 PrintMotd yes
+华为镜像源
+deb https://mirrors.huaweicloud.com/debian/ buster main contrib non-free
+deb https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free
+deb https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free
+deb https://mirrors.huaweicloud.com/debian-security/ buster/updates main contrib non-free
+deb-src https://mirrors.huaweicloud.com/debian/ buster main contrib non-free
+deb-src https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free
+deb-src https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free 
+
 >>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
 >>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 PasswordAuthentication yes

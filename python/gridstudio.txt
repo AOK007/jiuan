@@ -1,0 +1,14 @@
+windows:安装docker  安装git 
+下载gridstudio的mirror：
+docker pull ricklamers/gridstudio:release
+下载gridstudio的git包：
+git clone https://github.com/ricklamers/gridstudio
+（其实根据下面的运行方法，不指定-v路径的话，这个包也是不需要下载的）
+我们直接运行命令：
+docker run --name=gridstudio --rm=false -p 8080:8080 -p 4430:4430 ricklamers/gridstudio:release
+然后在windows的浏览器中输入http://第一步中的ip:8080
+Username: admin password: admin
+ 下次启动时因为已有container，直接输入命令：
+ docker start gridstudio
+127.0.0.1:8080才能编辑
+其他主机可以直接输入宿主机IP 8080访问
