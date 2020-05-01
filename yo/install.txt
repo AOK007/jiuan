@@ -1,4 +1,0 @@
-﻿npm install --global yo
-npm install --global generator-fountain-webapp
-创建文件夹
-mkdir mytodo && cd mytodo
