@@ -1,0 +1,21 @@
+apt-get install vsftpd
+netstat -npl
+显示结果
+tcp6       0      0 :::21                   :::*                    LISTEN      13369/vsftpd
+3.启用匿名登录
+停止 vsftpd 服务
+/etc/init.d/vsftpd stop
+修改配置文件
+ vim /etc/vsftpd.conf
+修改为
+anonymous_enable=YES
+启用 vsftpd 服务
+/etc/init.d/vsftpd start
+4.出现问题
+用 Firefox 浏览器打开 ftp://xxx.xxx.xxx.xxx，弹出输入用户名密码对话框，输入 root 和密码，弹出警告: 500 OOPS: priv_sock_get_cmd
+5.问题解决
+停止 vsftpd 服务
+在 /etc/vsftpd.conf 中添加
+seccomp_sandbox=NO
+启用 vsftpd 服务
+再次用 Firefox 打开，不用输入用户名密码，正常访问，将文件放到 /srv/ftp/ 目录下就可以看到。

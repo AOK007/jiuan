@@ -1,16 +1,23 @@
 docker exec -it 容器名或容器id 进入后执行的第一个命令
+ docker run -d -p 8080:80 nginx （创建nginx容器）
+docker run -it ubuntu /bin/bash （创建ubuntu容器）
+使用inspect命令查看镜像的详细信息
+docker inspect 镜像id
 列出本机正在运行的容器
 docker container ls
 列出本机所有容器，包括已经终止运行的
 docker container ls --all
-停止一个已经在运行的容器
-docker container stop 容器名或容器id
-启动一个已经停止的容器
-docker container start 容器名或容器id
+停止一个已经在运行的容器 docker container stop 容器名或容器id
+启动一个已经停止的容器 docker container start 容器名或容器id
+如果容器已经存在，我们可以使用 exec 命令进入：
+$ docker start eafd9111ada6                # 启动容器
+$ docker exec -it eafd9111ada6  /bin/bash  # 进入容器
 kill掉一个已经在运行的容器
 docker container kill 容器名或容器id
+先exit
 docker container rm 容器名或容器id 删除容器
 docker commit 容器名 镜像名 保存
+针对tag镜像的删除：使用docker rmi 镜像id ：版本号 删除
 镜像备份与迁移
 docker save -o 保存的文件名 镜像名
 对方在拿到镜像文件后，可以通过load方法，将镜像加载到本地
@@ -28,3 +35,17 @@ $docker rmi image_name
 # 显示一个镜像的历史; 
 # --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  
 $docker history image_name  
+推送操作
+docker login --username=www8899878@163.com registry.cn-hangzhou.aliyuncs.com（登录）
+docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号] （修改版本号和镜像ID）
+docker push registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号]（推送）
+2. 从Registry中拉取镜像
+$ sudo docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号]
+容器名    镜像名 
+docker容器导入导出 docker ps -a 查看所有容器
+导出-export    docker export web01 > /home/centos7-web01.tar
+导入-import docker import centos7-web01.tar text/web02:7.4（备注:在导出目录下进行操作）
+导出镜像 docker save d3949e34634c > /home/centos7.4.tar
+导入镜像  #docker load <>
+docker commit -m "web01" cca5f5d4c240 slave/centos:7.4.1709 保存配置完成的容器提交成镜像
+有因为这个镜像产生的容器要先删除容器在删除镜像镜像删不掉因此这种情况需要我们换中方式删除：docker rmi + REPOSITORY名:TAG如：docker rmi sentry_web:latest

@@ -1,0 +1,13 @@
+Linux生成SSH公钥
+一、运行 ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
+xxxxx@xxxxx.com 为你自己的邮箱
+按照提示完成三次回车，即可生成 ssh key。
+ssh -v debug 查看日志
+确保ssh-agent正在运行：
+如果您使用的是GitHub Desktop随附的Git Shell，则ssh-agent应该正在运行。
+如果使用的是其他终端提示符，例如Windows的Git，则可以使用“ 使用SSH密钥密码 ”中的“自动启动ssh-agent”说明，或手动启动它
+# start the ssh-agent in the background
+$ eval $(ssh-agent -s)
+> Agent pid 59566
+将SSH私钥添加到ssh-agent。如果您使用其他名称创建密钥，或者要添加具有其他名称的现有密钥，请使用私有密钥文件的名称替换命令中的id_rsa。
+$ ssh-add ~/.ssh/id_rsa

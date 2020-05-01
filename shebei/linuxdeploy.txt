@@ -1,22 +1,26 @@
 ﻿源 mirrors.tuna.tsinghua.edu.cn(清华园)
 mirrors.aliyun.com/阿里云
 发行版本 debian stable (稳定版)#不会用。。
+/mnt/sdcard 这是内存卡的路径
 镜像模式自动大小
 apt-get install wget && wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && bash install.sh
-（如果报错sudo apt-get install python-setuptools && Pip install pillow）
-apt-get install openjdk-11-jdk
+（如果报错sudo apt-get install python-setuptools && pip install pillow）
+apt-get install  -y openjdk-11-jdk
 apt-get install -y default-mysql-server
-apt-get install -y pip
+apt-get install -y python3-pip
+1.（ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py)
+2.python get-pip.py
+3.python3 get-pip.py
 apt-get install -y python
 pip install scrapy
 apt-get install  -y nmap
 apt-get install -y hydra
 apt-get install -y sqlmap
-apt-get install -y msf
+apt-get install -y metasploit-framework
 apt-get install -y netcat
 ssh（自带）
 vnc（自带）
-apt-get install git
+apt-get install -y git
 apt-get install -y nodejs
 apt-get install -y npm
 宝塔直接安装nginx启动不了就干掉占用80端口的  kill 进程数字再启动

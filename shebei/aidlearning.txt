@@ -63,9 +63,10 @@ PrintMotd yes
 deb http://mirrors.163.com/debian/ buster main non-free contrib
 apt-get update && apt-get update
 apt-get install openjdk-11-jdk
-apt install apache2
+apt install apache2 X
 apt install default-mysql-server
 pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）（）
+pip install django
 apt-get install node
 apt-get install curl
 apt-get install openssh-clients(src)
