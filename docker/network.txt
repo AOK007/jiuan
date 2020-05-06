@@ -1,0 +1,17 @@
+
+apt install net-tools
+容器网卡桥接网络kali
+auto br0
+iface br0 inet static
+address 192.168.1.254
+netmask 255.255.240.0
+gateway  192.168.1.255
+bridge_ports em1
+bridge_stp off
+dns-nameservers 8.8.8.8 192.168.1.1
+将docker的默认网桥绑定到这个新建的br0上面，这样就将这台机器上容器绑定到em1这个网卡所对应的物理网络上了。ubuntu修改/etc/default/docker文件 添加最后一行内容
+DOCKER_OPTS="-b=br0"
+安装pipework
+git clone https://github.com/jpetazzo/pipework
+cp ./pipework/pipework /usr/local/bin/
+docker run -itd –name test1 –net=none  -h test1 centos /bin/bash    (test1 为容器名 centos镜像名）

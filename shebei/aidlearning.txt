@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
-﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
-deb http://mirrors.163.com/debian/ buster main non-free contrib
+cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 apt-get update && apt-get update
 apt-get install openjdk-11-jdk
 apt install apache2
-apt install default-mysql-server
+apt install -y default-mysql-server
 pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）（）
 apt-get install node
 apt-get install curl
-apt-get install openssh-clients(src)
+apt-get install -y openssh-server (scp)
 apt-get install php-fpm
 apt-get install netcat（）
 apt-get install nmap（）
@@ -44,28 +39,24 @@ listen 80 default_server;
 # 在document 里面修改自己需要的端口号
 listen 9322 default_server;
 listen [::]:9322 default_server;
-
 3,etc/init.d/nginx reload
 4,etc/init.d/nginx start
 5,etc/init.d/nginx status
 ssh
 apt-get  install openssh-server
-cd /etc/ssh
-vi sshd_config
+vi /etc/ssh/sshd_config
 Port 9696
 ListenAddress 0.0.0.0
 PermitRootLogin yes
 PrintMotd yes
-<<<<<<< HEAD
-=======
-=======
 ﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 deb http://mirrors.163.com/debian/ buster main non-free contrib
 apt-get update && apt-get update
-apt-get install openjdk-11-jdk
+apt-get install -y openjdk-11-jdk
 apt install apache2 X
-apt install default-mysql-server
-pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）（）
+apt-get install -y nginx
+apt install -y default-mysql-server
+pip install scrapyd
 pip install django
 apt-get install node
 apt-get install curl
@@ -102,12 +93,11 @@ vi /etc/nginx/sites-enabled/default
 # 在document 里面修改自己需要的端口号
 listen 9322 default_server;
 listen [::]:9322 default_server;
-
 3,etc/init.d/nginx reload
 4,etc/init.d/nginx start
 5,etc/init.d/nginx status
 ssh
-apt-get  install openssh-server
+apt-get  install  -y openssh-server
 cd /etc/ssh （华为平板无效）
 vi sshd_config
 Port 9696
@@ -123,7 +113,8 @@ deb https://mirrors.huaweicloud.com/debian-security/ buster/updates main contrib
 deb-src https://mirrors.huaweicloud.com/debian/ buster main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free 
-
->>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
->>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
-PasswordAuthentication yes
+1.已经安装AIDLearningV0.84-b2，只需要下载aidv0.85-b1.apk直接安装，而不用卸载AIDLearningV0.84-b2，AIDLearning将自动升级并配置，用户在AIDLearningV0.84-b2上安装的软件和依赖包将保留。
+2.如果是V0.83以及以前的版本，请先删除旧版本，并且记得保存代码文件和所需数据。
+3.AIDLearningV0.85-b1下载阶段保持wifi连接，并且保持AIDLearning不熄屏，不切换到其他APP直到下载结束为止，下载过程大约2分钟左右（根据网速，下载大小大约1.2Ｇ）。
+提示：如果是从V0.84升级到V0.85，升级后在terminal中输入source ~/.bashrc，然后重启AidLearning，重新进入后，之前的环境配置和依赖就都可以使用了
+vnc密码是123456

@@ -1,0 +1,8 @@
+下载官网下载
+
+解压
+tar zxvf filename.tar
+tar -zxvf  pycharm-xxx.tar.gz
+cd   pycharm/bin
+sh  pycharm.sh 安装
+./pycharm.sh 启动

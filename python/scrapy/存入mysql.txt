@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+# import json
+# class WtsPipeline(object):
+#     def __init__(self):
+#         self.fp = open("wenda.json", "w", encoding="utf-8")
+#
+#     def open_spider(self, spider):
+#         print('爬虫开始')
+#
+#     def process_item(self, item, spider):
+#         item.json = json.dumps(dict(item), encoding="utf-8")
+#         self.fp.write(item.json + '\n')
+#         return item
+#
+#     def close_spider(self, spider):
+#         self.fp.close()
+#         print('爬虫结束')
+
+
+import pymysql
+
+
+class PymysqlPipeline(object):
+    def __init__(self):
+        # 连接数据库
+        self.connect = pymysql.connect(
+            host='192.168.1.11',
+            db='scrapy',
+            user='ccc01',
+            passwd='Qq2389110614',
+            charset='utf8',
+            port=3306,
+            use_unicode=True)
+        self.cursor = self.connect.cursor()
+
+    # 增加开始语句提醒
+    def open_spider(self, spider):
+        print('爬虫开始了')
+
+
+
+    def process_item(self, item, spider):
+        cursor = self.cursor
+        sql = 'insert into wts(wen, wtd, yhd) values (%s,%s,%s)'
+        cursor.execute(sql, (
+            item['wen'], item['wtd'], item['yhd']))
+        self.connect.commit()
+
+        return item
+# 增加结束语句提醒
+    def close_spider(self, spider):
+        self.fp.close()
+        print('爬虫结束')
+在设置页面修改
+ITEM_PIPELINES = {
+   'wts.pipelines.PymysqlPipeline': 1,
+}

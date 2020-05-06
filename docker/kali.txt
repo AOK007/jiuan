@@ -1,3 +1,11 @@
+加速器 配置"registry-mirrors": ["https://y2bpaqmy.mirror.aliyuncs.com"],
+docker login --username=www8899878@163.com registry.cn-hangzhou.aliyuncs.com 登录
+docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01   镜像版本号 拉取镜像
+docker commit 容器名 镜像名 保存容器为新的镜像
+docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号] （修改版本号和镜像ID）
+docker push registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号]（推送）
+docker container start b6791f62fca3 （启动容器）
+docker exec -it b6791f62fca3 /bin/bash（进入容器）
 docker search kali
 docker pull kalilinux/kali-linux-docker（齐全功能版的）
 docker pull kalilinux/kali-rolling  （阿里压缩版）
@@ -9,8 +17,25 @@ deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 docker run -it kalilinux/kali-linux-docker /bin/bash 启动kali
 docker run -it kali /bin/bash （创建ubuntu容器）
 docker container start 容器名或容器id 启动一个已经停止的容器
+docker container rm 容器名或容器id 删除容器
 docker container ls 查询运行的容器
 docker container ls --all 查询所有容器
 docker exec -it 1785f97e1d8e /bin/bash  # 进入容器 1785f97e1d8e（容器名）
 exit 退出当前容器 (容器还是在运行中的)
 docker container stop 容器名或容器id (停止容器)
+ocker的容器默认可以访问外网，但是外网访问不了容器，可以使用端口映射的方式访问容器的服务，还有一种方法就是桥接到物理网络。
+1、docker网络模式：有如下五种：
+ host模式(--net=host)            container模式                  none模式(--net=none)                   bridge模式(--net=bridge)
+host模式：  需要使用docker run是指定： --net=host     使用的网络实际上和宿主机是一样,在容器内的IP和宿主机的IP是一样,类似于vmare桥接模式；
+container模式：使用  --net=container:container_id/container_name，多个容器使用共同的网络,看到的IP是一样的；
+none模式：  --net=none    这种模式下,不会配置任何网络；
+bridge模式：--net=bridge，不指定是默认也是这种模式，这种模式会为每个容器分配一个独立的network 网卡，同一个宿主机是在同一个网段下可以通信的，类似于 VMware 的 NAT模式；
+docker run -itd --net=bridge kali /bin/bash
+docker container start 9b6d7e85e600
+apt install net-tools 
+容器需要固定IP地址，所以，创建自定义网络
+docker network create --subnet=192.168.1.1/24  kali-network
+docker run -itd -p 9696:9696 --network=kali-network --ip 192.168.1.100  kali
+放弃windows docker
+
+

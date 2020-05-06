@@ -1,3 +1,5 @@
+mysql -h 192.168.1.11 -P 3306 -u ccc01 -pQq23（连接远程数据库）
+select 字段1，字段2，... from table where 字段 like '%内容%；
 主从
 事务
 增加
@@ -9,3 +11,5 @@ select * from table
 select *from table where (table_字段='条件')
 聚合
 优化
+2.模糊查询
+SELECT * FROM wts WHERE wen LIKE '%理赔%'; （表/where 字段）

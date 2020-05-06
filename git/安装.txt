@@ -20,8 +20,8 @@ ssb   4096R/42B317FD4BA89E7A 2016-03-10
 将GPG密钥添加到您的GitHub帐
 生成秘钥ssh
 ssh-keygen -t rsa -b 4096 -C "www8899878@163.com"
-git config --global user.name 设置账户
-git config --global user.email 邮箱地址
+git config --global user.name "www8899878"  设置账户
+git config --global user.email "www8899878@163.com"  邮箱地址
 git init初始化
 git add .（添加）
 git commit -m "注释"
