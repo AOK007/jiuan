@@ -37,5 +37,11 @@ apt install net-tools
 docker network create --subnet=192.168.1.1/24  kali-network
 docker run -itd -p 9696:9696 --network=kali-network --ip 192.168.1.100  kali
 放弃windows docker
+1.启动容器时，挂载本地 Ubuntu 系统的 /etc/apt 目录：
+docker run -itd --name MyUbuntu -v /etc/apt:/home/etc  ubuntu:16.04 /bin/bash
+2.删除容器下的 sources.lis：rm /etc/apt/sources.list
+3.将本地 sources.list 复制过来 cp /home/etc/sources.list /etc/apt/
+4.再启动容器下载软件速度正常.
+
 
 

@@ -113,8 +113,42 @@ deb https://mirrors.huaweicloud.com/debian-security/ buster/updates main contrib
 deb-src https://mirrors.huaweicloud.com/debian/ buster main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free
 deb-src https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free 
+华为kali镜像源
+deb https://mirrors.huaweicloud.com/kali kali-rolling main non-free contrib
+deb-src https://mirrors.huaweicloud.com/kali kali-rolling main non-free contrib
+阿里镜像
+deb http://mirrors.aliyun.com/debian stretch main contrib non-free
+deb-src http://mirrors.aliyun.com/debian stretch main contrib non-free
+deb http://mirrors.aliyun.com/debian stretch-updates main contrib non-free
+deb-src http://mirrors.aliyun.com/debian stretch-updates main contrib non-free
+deb http://mirrors.aliyun.com/debian-security stretch/updates main contrib non-free
+deb-src http://mirrors.aliyun.com/debian-security stretch/updates main contrib non-free
 1.已经安装AIDLearningV0.84-b2，只需要下载aidv0.85-b1.apk直接安装，而不用卸载AIDLearningV0.84-b2，AIDLearning将自动升级并配置，用户在AIDLearningV0.84-b2上安装的软件和依赖包将保留。
 2.如果是V0.83以及以前的版本，请先删除旧版本，并且记得保存代码文件和所需数据。
 3.AIDLearningV0.85-b1下载阶段保持wifi连接，并且保持AIDLearning不熄屏，不切换到其他APP直到下载结束为止，下载过程大约2分钟左右（根据网速，下载大小大约1.2Ｇ）。
 提示：如果是从V0.84升级到V0.85，升级后在terminal中输入source ~/.bashrc，然后重启AidLearning，重新进入后，之前的环境配置和依赖就都可以使用了
 vnc密码是123456
+安装Metasploit
+1.添加Kali源
+添加数字证书
+$wget archive.kali.org/archive-key.asc   //下载签名
+$apt-key add archive-key.asc   //安装签名
+2.更新包列表
+$apt-get update
+0x1 安装postgresql
+添加postgresql源
+deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
+安装postgresql
+$wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+//添加数字证书
+$apt-get update
+$apt-get install postgresql
+apt-get install metasploit-framework #so easy
+初始化metasploit-framework
+$msfdb init 
+0x4 完成安装，检查
+msf启动
+$msfconsole
+检测数据库连接
+msf>db_status
+出现postgresql connected to xxx说明数据库连接正常

@@ -1,0 +1,13 @@
+debian完全卸载删除应用
+参考
+https://blog.csdn.net/w3045872817/article/details/77334886
+
+前言
+在Debian上安装mysql的时候Debin安装Mysql，第一次出现了问题，需要卸载重新安装，卸载的时候又出现了新的问题，这里记录下来，以备以后使用。
+
+步骤
+先运行sudo apt-get remove mysql-\* 卸载mysql相关的所有应用，最后用斜杠加星号匹配是因为在zsh下
+卸载的时候提示有一些lib依赖没有被使用，所以运行sudo apt autoremove清除无用的依赖
+运行dpkg --list|grep mysql，查看mysql有哪些安装还没有完全卸载
+然后运行sudo dpkg --purge加上面列出来的一个个软件包名，一个个的卸载
+这样就完全卸载干净了，可以继续操作其他事情了。

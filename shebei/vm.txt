@@ -6,3 +6,5 @@ kali
 centos elk
 vm12 激活
 5A02H-AU243-TZJ49-GTC7K-3C61N
+安装tools
+在设置直接选择安装然后解压进入目录 ./执行文件自动安装选择yes
