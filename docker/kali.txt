@@ -1,3 +1,4 @@
+docker pull booyaabes/kali-linux-full （用这个镜像比较全太大了9G）
 加速器 配置"registry-mirrors": ["https://y2bpaqmy.mirror.aliyuncs.com"],
 docker login --username=www8899878@163.com registry.cn-hangzhou.aliyuncs.com 登录
 docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01   镜像版本号 拉取镜像
@@ -7,9 +8,9 @@ docker push registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:[镜像版本号]（
 docker container start b6791f62fca3 （启动容器）
 docker exec -it b6791f62fca3 /bin/bash（进入容器）
 docker search kali
-docker pull kalilinux/kali-linux-docker（齐全功能版的）
-docker pull kalilinux/kali-rolling  （阿里压缩版）
-docker pull kalilinux/kali-dev （压缩版）
+docker pull kalilinux/kali-linux-docker（齐全功能版的windows）
+docker pull kalilinux/kali-rolling  （阿里压缩版windows）
+docker pull kalilinux/kali-dev （压缩版windows）
 #kali官方源
 deb http://http.kali.org/kali kali-rolling main non-free contrib
 #中科大的源
