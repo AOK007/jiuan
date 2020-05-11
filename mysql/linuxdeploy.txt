@@ -51,7 +51,7 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿select * from name where type ='name';条件where查询
 ﻿insert table-name (type) values ('那');增加一行数据
 ﻿alter table ccc02 add column id int(11) not null;增加一列
-﻿update ccc02 set name='张生' where id=0;更新表
+﻿update ccc02 set name='张生' where id=0更新表
 ﻿delete from ccc02 where id=0;条件删除
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
