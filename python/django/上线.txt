@@ -1,0 +1,35 @@
+1.pip3 install uwsgi # 安装uwsgi
+2.vi /www/demo/demo.xml # 创建一个demo.xml 文件并填写以下内容
+<uwsgi>
+<socket>127.0.0.1:8000</socket> <!-- 内部端口，自定义 -->
+<chdir>/data/www/demo/</chdir> <!-- 项目路径 -->
+<module>demo.wsgi</module> <!-- demo为wsgi.py所在目录名-->
+<processes>4</processes> <!-- 进程数 -->
+<daemonize>uwsgi.log</daemonize> <!-- 日志文件 -->
+</uwsgi>
+3.然后打开nginx.conf，把原来的内容删除，直接加入以下内容：
+events {
+worker_connections 1024;
+}
+http {
+include mime.types;
+default_type application/octet-stream;
+sendfile on;
+server {
+listen 80;
+server_name www.bingpython.com; #改为自己的域名，没域名修改成ip
+charset utf-8;
+location / {
+include uwsgi_params;
+uwsgi_pass 127.0.0.1:8000; #端口要和uwsgi里配置的一样
+uwsgi_param UWSGI_SCRIPT demo.wsgi; #wsgi.py所在的目录名+.wsgi
+uwsgi_param UWSGI_CHDIR /www/demo/; #项目路径
+}
+location /static/ {
+alias /www/static/; #静态资源路径
+}
+}
+}
+4.进入 /www/demo/ 目录，进入项目目录启动uwsgi
+uwsgi -x demo.xml
+5.启动nginx

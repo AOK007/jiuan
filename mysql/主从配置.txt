@@ -1,0 +1,15 @@
+主服务器 server-id =1
+从服务器server-id =2 （不能为1可以设置IP最后一段保证唯一）
+log-bin=mysql-bin(主从服务器核心)
+主从服务器数据库表一致
+主服务器配置创建一个专门同步数据的账号
+grant replication slave on *.* to 'mysync'@'%' identfied by 'passwd';
+show master status;(查看状态。以后不要进行任何操作可以看到file/position)
+从服务配置
+change master to master_host='ip主服务器'，master_user='mysync',master_password='passwd',master_log_file='mysql-bin.[file]',master_log_pos=[position];
+[file][position]要与主机状态显示一致
+start slave;开启从服务
+show slave status\G 查看从服务状态。（如下2个选项为yes表明主从成功）
+slave_IO_running:yes
+slave_sql_running:yes
+主服务器插入数据

@@ -1,2 +1,28 @@
 fdisk /dev/sda
 df -h
+heda 10 文件（查看文件前10行）
+grep ftp /etc/passwd -n -i (n代表行号 i代表不区分大小写 在passwd查看ftp这个内容)
+find 目录 条件 动作 
+默认当前目录
+选项： -name -type -size(文件大小+大于-小于) -group(指定组) -user(指定用户) -mtime/atime/ctime(指定修改、访问、创建时间单位为天 +表示几天前-表示几天内) -amin/mmin/cmin 功能和上面一样时间为分钟
+whereis 程序名搜索
+which 应用命令是否存在以及执行的到底是哪一个
+path  /etc/profile添加系统变量
+whoami 查看当前用户 、/etc/passwd 可以看到所有用户
+useradd: 添加用户
+useradd name 
+-d 指定家目录不指定就有一个用户名的同样的目录
+-u 指定用户ID必须大于500 小于500的系统占用了
+-s 指定用户执行的shell 若用户已经创建可以禁止登陆
+chsh 用户名 -s  /sbin/nologin (禁止这个用户登录)
+userdel 删除指定用户  userdel 用户名 彻底删除还要删除/home/用户名 及/var/mail/用户名 这2目录
+passwd 设置用户密码 passwd 用户名 查看所有用户密码 /etc/shadow
+组的信息在 /etc/group 添加组 groupadd 组名 删除 groupdel 组名
+gpasswd 向用户组添加或删除用户 -a 指定用户加入指定组 -d 将指定用户从指定组删除
+chgrp 设置文件所属组 chgrp 组名 文件名 （修改文件所属组）
+chown 设置文件所有者 chown 用户【：组名】文件名 修改文件所有者及组名（可以直接用UID或GID代替用户名和组名。加上 -r 递归修改子目录的用户名和组）
+w 系统当前在做什么
+top  q退出 显示当前进展
+free -h 查看当前内存
+ps a 显示控制终端信息 u 用户信息 x 显示没有控制终端的进程（ps aux）
+kill 杀死进程 kill -9 进程id 

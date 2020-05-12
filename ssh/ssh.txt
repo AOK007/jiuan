@@ -1,13 +1,24 @@
-Linux生成SSH公钥
-一、运行 ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
-xxxxx@xxxxx.com 为你自己的邮箱
-按照提示完成三次回车，即可生成 ssh key。
-ssh -v debug 查看日志
-确保ssh-agent正在运行：
-如果您使用的是GitHub Desktop随附的Git Shell，则ssh-agent应该正在运行。
-如果使用的是其他终端提示符，例如Windows的Git，则可以使用“ 使用SSH密钥密码 ”中的“自动启动ssh-agent”说明，或手动启动它
-# start the ssh-agent in the background
-$ eval $(ssh-agent -s)
-> Agent pid 59566
-将SSH私钥添加到ssh-agent。如果您使用其他名称创建密钥，或者要添加具有其他名称的现有密钥，请使用私有密钥文件的名称替换命令中的id_rsa。
-$ ssh-add ~/.ssh/id_rsa
+﻿apt-get  install openssh-server
+termux pub配置
+上传秘钥
+cat xxx.pub > data/data/com.termux/files/home/.ssh/authorized_keys 
+scp 
+将远程主机文件复制到本地
+scp -p 192.168.214.187:/tmp/demo/f3.log /tmp/files/
+将远程主机复制目录
+scp -rp ./files/ 192.168.214.187:/tmp/demo
+1.上传本机文件到远程服务器
+ scp local_path/file_name   user_name@remote_ip:remote_path/
+2.上传本机目录到远程服务器
+ scp -r local_path/fold_name user_name@remote_ip:remote_path/
+3.拷贝远程服务器文件到本机
+  scp user_name@remote_ip:remote_path/file_name  local_path/
+4.拷贝远程服务器目录到本机
+  scp -r user_name@remote_ip:remote_path/folder_name local_path/
+apt-get  remove openssh-server卸载服务
+windows 使用 SSH连接时出现Host key verification failed的原因及解决方法
+找到C:\Users\Administrator\.ssh 删除known_hosts 文件里面的记录就好了
+Windows:使用ssh
+设置 可选应用添加openssh/openssh服务器 添加程序好后Win + R打开运行 输入services.msc 找到openssh 2个都设置自动
+从linux系统复制文件到windows系统：scp /oracle/a.txt  administrator@192.168.3.181:/d:/
+在linux环境下，将windows下的文件复制到linux系统中：scp administrator@192.168.3.181:/d:/test/config.ips  /oracle

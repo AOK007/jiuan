@@ -1,0 +1,2 @@
+进入资料目录  python -m SimpleHTTPServer 8081
+其他人就可以跟据IP 和端口下载了。当然端口可以随便改不要有冲突就好
