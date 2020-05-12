@@ -87,4 +87,8 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿delete from ccc02 where id=0;条件删除
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
+<<<<<<< HEAD
 >>>>>>> 52e86732a936d6fb3f60bbf67526d18f599daddb
+=======
+>>>>>>> 0c1e773ba86c104d8a7adf07ed8fae3f3519c0f1
+>>>>>>> 18f4808848453eacaf88005d554710728cd06ef2
