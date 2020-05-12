@@ -1,0 +1,12 @@
+仔细查看安装turtle出错的错误信息，可以看到是个语法错误。
+pip在下载包后，会解压到本地再安装，提示的错误在解压的文件里面，turtle 0.0.2setup.py
+解决的办法就是：按照给定的链接（我的是这个），把turtle包下载到本地，手动解压，修改setup.py文件再安装。
+：文件，第行修改为setup.py40
+ except (ValueError, ve):
+原来的是Python2的写法，没有括号，加了括号之后Python3就能用了
+用pip3安装修：
+ pip install -e turtle-0.0.2
+-e后面接上我们修改过文件的目录。setup.py
+这样就搞定了。
+另外，如果提示python-tk未安装，用apt命令安装就可以了：
+sudo apt install python-tk
