@@ -5,3 +5,8 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py 
 完整系统可以直接使用下面安装
 apt-get install python-pip
+python 在安装lxml的时候，总是安装失败，这个时候，我们可以换一个库进行安装，我这使用的是豆瓣 
+pip install -i https://pypi.douban.com/simple lxml
+这样会超级快
+或者是安装其他的插件的时候 比如 locustio ，也可以使用该库进行安装
+pip install -i https://pypi.douban.com/simple locustio

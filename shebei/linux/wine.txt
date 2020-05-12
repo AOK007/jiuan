@@ -1,0 +1,40 @@
+这里介绍Wine官方给出的在Ubuntu环境下的安装方法：（未尝试）
+#如果你使用的是64位Ubuntu，则先要开启32位安装环境：
+sudo dpkg --add-architecture i386
+#然后需要下载一个PGP公钥以识别软件仓库：
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+#添加公钥并添加软件源：
+sudo apt-key add Release.key
+sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+#更新软件列表
+sudo apt-get update
+#之后就可以选择Wine版本安装了： （选一种）
+ apt-get install wine-development
+#稳定版（Stable branch）安装命令
+sudo apt-get install --install-recommends winehq-stable
+#开发版（Development branch)安装命令
+sudo apt-get install --install-recommends winehq-devel
+#发布版（Staging branch）安装命令
+sudo apt-get install --install-recommends winehq-staging
+编译安装
+wget https://dl.winehq.org/wine/source/3.0/wine-3.0-rc1.tar.xz
+tar jxvf wine-3.0-rc1.tar.xz
+cd wine-3.0-rc1  
+如果你是要32位wine，则是：
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ ./configure
+如果你是要64位wine，则是：
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ ./configure --enable-win64
+apt-get install flex
+apt-get install bison
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ sudo make
+一个小时...
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ sudo make install
+如果你安装的是32位wine，则是
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ wine --version
+wine-3.0-rc1
+如果你安装的是64位wine，则是
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ wine64 --version
+wine-3.0-rc1
+如果是64位的wine，还需要增加一个链接，
+guoyanzhang@bogon:~/下载/wine-3.0-rc1$ sudo ln -s /usr/local/bin/wine64 /usr/local/bin/wine
+

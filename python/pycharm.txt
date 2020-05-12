@@ -1,0 +1,26 @@
+下载官网下载
+
+解压
+tar zxvf filename.tar
+tar -zxvf  pycharm-xxx.tar.gz
+cd   pycharm/bin
+sh  pycharm.sh 安装
+./pycharm.sh 启动
+输入一下命令，修改pycharm桌面终端文件。
+sudo gedit /usr/share/applications/Pycharm.desktop
+5.将一下代码复制进文件
+[Desktop Entry]
+Type=Application
+Name=Pycharm
+GenericName=Pycharm3
+Comment=Pycharm3:The Python IDE
+Exec=sh /home/soft/pycharm-community-2017.3.1/bin/pycharm.sh （修改自己文件目录）
+Icon=/home/soft/pycharm-community-2017.3.1/bin/pycharm.png （修改自己文件目录）
+Terminal=pycharm
+Categories=Pycharm;
+6.修改对应的路径
+Exec=sh /home/soft/pycharm-community-2017.3.1/bin/pycharm.sh
+// 这一行对应的是启动命令，需要修改成自己安装的目录。
+Icon=/home/soft/pycharm-community-2017.3.1/bin/pycharm.png
+// 这一行对应的是启动图标，也许修改成自己的安装目录。
+7.在搜索中，输入pycharm，会自动出来图标，拉到下方任务栏即可。

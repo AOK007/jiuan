@@ -1,0 +1,6 @@
+文字转语音
+from gtts import gTTS
+texttoVoice  = gTTS(text='文字'，lang='zh-tw')
+texttoVoice.save('文件.mp3')
+运行py文件
+要可以科学上网。。。
