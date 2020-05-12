@@ -1,14 +1,15 @@
+# -*- coding: utf-8 -*-
 import turtle
 #str = input('请输入表白语：')
 str = input('雨欣：001')
 turtle.speed(10)#画笔速度
 turtle.setup(1800,700,70,70)
 turtle.color('black', 'pink')# 画笔颜色
-turtle.pensize(3)   # 画笔粗细
+turtle.pensize(3) # 画笔粗细
 turtle.hideturtle() # 隐藏画笔（先）
 turtle.up() # 提笔
 turtle.goto(-655, -255) # 移动画笔到指定起始坐标（窗口中心为0,0）
-turtle.down()   #下笔
+turtle.down() #下笔
 turtle.showturtle() #显示画笔
 #画左边的小人
 turtle.goto(-600,-200)
@@ -127,11 +128,11 @@ turtle.left(45)
 turtle.circle(17.67,180)
 turtle.left(180)
 turtle.circle(17.67,180)
-turtle.end_fill() 
+turtle.end_fill();
 
 #第6个爱心
 turtle.color('pink', 'pink')
-turtle.begin_fill() 
+turtle.begin_fill(); 
 turtle.hideturtle()
 turtle.up() 
 turtle.goto(53.88, -153)
