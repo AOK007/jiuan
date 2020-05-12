@@ -10,3 +10,4 @@ pip在下载包后，会解压到本地再安装，提示的错误在解压的�
 这样就搞定了。
 另外，如果提示python-tk未安装，用apt命令安装就可以了：
 sudo apt install python-tk
+sudo apt-get install tcl-dev tk-dev python3-tk（安装这个才能起动要在桌面端运行）
