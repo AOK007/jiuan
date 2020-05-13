@@ -13,3 +13,34 @@ select *from table where (table_字段='条件')
 优化
 2.模糊查询
 SELECT * FROM wts WHERE wen LIKE '%理赔%'; （表/where 字段）
+3.建tb_emp表 id 做外键
+create table tb_dept (id int(11)not null auto_increment, deptName varchar(30)default null, locAdd varchar(40)default null, primary key(id) )engine=innodb auto_increment=1 default charset=utf8;
+4.建表 id 做外键
+create table tb_emp (id int(11)not null auto_increment, name varchar(20)default null, deptid int(11)default null, primary key(id) )engine=innodb auto_increment=1 default charset=utf8;
+5.插入数据
+insert into tb_dept(deptName, locAdd)values('rd',11);
+insert into tb_dept(deptName, locAdd)values('hr',12);
+insert into tb_dept(deptName, locAdd)values('mk',13);
+insert into tb_dept(deptName, locAdd)values('mis',14);
+insert into tb_dept(deptName, locAdd)values('fd',15);
+insert into tb_emp(name,deptid)values('z3',1);
+insert into tb_emp(name,deptid)values('z4',1);
+insert into tb_emp(name,deptid)values('z5',1);
+insert into tb_emp(name,deptid)values('w5',2);
+insert into tb_emp(name,deptid)values('w6',2);
+insert into tb_emp(name,deptid)values('s7',3);
+insert into tb_emp(name,deptid)values('s8',4);
+insert into tb_emp(name,deptid)values('s9',51);
+select * from tb_emp;
+select * from tb_dept;
+select * from tb_emp a inner join tb_dept b on a.deptid=b.id;  (ab表共有)
+select * from tb_emp a left  join tb_dept b on a.deptid=b.id;  (ab表共有a表独有)
+select * from tb_emp a right  join tb_dept b on a.deptid=b.id;  (ab表共有b表独有)
+select * from tb_emp a left  join tb_dept b on a.deptid=b.id where b.id is null;  (a表独有b为null)
+select * from tb_emp a right  join tb_dept b on a.deptid=b.id where a.deptid is null;  (b表独有a为null)
+select * from tb_emp a left  join tb_dept b on a.deptid=b.id
+union
+select * from tb_emp a right  join tb_dept b on a.deptid=b.id;  (a+b+共有)
+select * from tb_emp a left  join tb_dept b on a.deptid=b.id where b.id is null
+union
+select * from tb_emp a right  join tb_dept b on a.deptid=b.id where a.deptid is null;  (ab表独有)

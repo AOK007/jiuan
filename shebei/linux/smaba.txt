@@ -1,0 +1,8 @@
+然后在尾部加入
+
+[share]
+      path =/a/share
+      available = yes
+      browsealbe = yes
+      public= no
+      writable = yes

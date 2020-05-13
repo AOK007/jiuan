@@ -1,2 +1,3 @@
 dir 列出文件类似linux ls
 notepad类似linux vi
+mkdir 或md 类似 linux mkdir

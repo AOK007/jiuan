@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
-﻿宝塔安装
+宝塔安装
 刷新
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb
 apt-get install -y default-mysql-server
@@ -26,17 +21,8 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿alter table ccc02 add column id int(11) not null;增加一列
 ﻿update ccc02 set name='张生' where id=0;更新表
 ﻿delete from ccc02 where id=0;条件删除
-﻿drop table ccc02;删除表
+﻿drop table ccc02;删除表 （要大写）
 ﻿alter table id drop id;删除id表id列
-<<<<<<< HEAD
-=======
-=======
-﻿宝塔安装
-刷新
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb
-apt-get install -y default-mysql-server
-/etc/init.d/mysql start
-mysql -u root
 创建用户CREATE USER 'name'@'%'IDENTIFIED BY 'pwd';
 mysql授权GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' IDENTIFIED BY 'PASSWD';
 select user,host from mysql.user;（查询数据库用户）
@@ -56,10 +42,7 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿delete from ccc02 where id=0;条件删除
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
->>>>>>> 17aacdc694e2213ceb41ecb2b3af35772a6a9890
->>>>>>> cde4ec06aad1c74c4f6c79568fd6a0d9935e92db
 ﻿alter table id change sex mobile char(12);修改列名称 数据类型
-=======
 apt-get install -y default-mysql-server
 /etc/init.d/mysql start
 mysql -u root -p
@@ -68,7 +51,7 @@ mysql授权GRANT ALL PRIVILEGES ON *.* TO 'ccc01'@'%' IDENTIFIED BY 'PASSWD';
 FLUSH PRIVILEGES;   (刷新权限)
 /etc/mysql/my.cnf 找到 bind-address  =127.0.0.1  将其注释掉；//作用是使得不再只允许本地访问；
 也可以改成bind-address  =0.0.0.0
-aid 里面是在vi   /etc/mysql/mariadb.conf.d/50-server.cnf  找到 bind-address  =127.0.0.1  将其注释掉；
+aid 里面是在 vi /etc/mysql/mariadb.conf.d/50-server.cnf  找到 bind-address  =127.0.0.1  将其注释掉；
 mysql -h 192.168.1.7 -P 3306 -u ccc01 -p(远程登录)
 select user,host from mysql.user;（查询数据库用户）
 CREATE DATABASE ccc01 ;database_name;创建数据库
@@ -87,8 +70,4 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿delete from ccc02 where id=0;条件删除
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
-<<<<<<< HEAD
->>>>>>> 52e86732a936d6fb3f60bbf67526d18f599daddb
-=======
->>>>>>> 0c1e773ba86c104d8a7adf07ed8fae3f3519c0f1
->>>>>>> 18f4808848453eacaf88005d554710728cd06ef2
+drop index 索引名 on table_name 删除索引
