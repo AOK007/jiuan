@@ -113,6 +113,6 @@ t.down()
 t.up()
 t.goto(200,0)
 t.down()
-t.write("To:小鱼儿",font=("隶书",20))
+t.write("To:雨欣",font=("隶书",20))
 
 t.done()
