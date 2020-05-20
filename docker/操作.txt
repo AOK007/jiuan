@@ -50,3 +50,5 @@ docker容器导入导出 docker ps -a 查看所有容器
 docker commit -m "web01" cca5f5d4c240 slave/centos:7.4.1709 保存配置完成的容器提交成镜像
 有因为这个镜像产生的容器要先删除容器在删除镜像镜像删不掉因此这种情况需要我们换中方式删除：docker rmi + REPOSITORY名:TAG如：docker rmi sentry_web:latest
 Get https://registry-1.docker.io/v2/library/debian/manifests/latest: net/http: TLS handshake timeout 有可能是网络延迟重新来一次就好
+删除none镜像
+docker rmi $(docker images | grep "none" | awk '{print $3}')
