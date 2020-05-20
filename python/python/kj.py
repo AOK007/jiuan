@@ -5,7 +5,7 @@ def wake_up(request, mac='00-E0-4C-36-15-99'):
     if len(MAC) !=17:
         raise  ValueError("MAC address should be set as form 'xx-xx-xx-xx-xx-xx'")
     mac_address = MAC.replace("." '')
-    data = ''.join(['FFFFFFFFFFFFF', mac_address * 20 ]) #构造原始数据格式
+    data = ''.join(['FFFFFFFFFFFF', mac_address * 20 ]) #构造原始数据格式
     send_data = b''
     #吧原始数据转换16进制数组
     for i in range(0,len(data), 2):

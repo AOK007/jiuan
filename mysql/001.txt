@@ -1,0 +1,19 @@
+create table licai(  id int(11)not null ,rq datetime(6),jine decimal(18,2),address varchar(50),shanghu varchar(50),beizhu varchar(50),primary key(id) )engine=innodb auto_increment=1 default charset=utf8;
+create table user( id int(11)not null ,rq datetime(6),jine decimal(18,2),address varchar(50),shanghu varchar(50),beizhu varchar(50),primary key(id) )engine=innodb auto_increment=1 default charset=utf8;
+select * from licai a inner join user b on a.id=b.id;
+select * from licai a left  join user b on a.id=b.id;
+select   姓名,差额=sum(数值)  
+  from(  
+      select   姓名,数值   from   充值表  
+      union   all  
+      select   姓名,-数值   from   扣费表  
+  )a   group   by   姓名  
+一般求和
+select sum(money) from user group by id;
+select sum(jinr) from zhichu group by id;
+按条件求和
+select sum(if(type=1,money,0)) from user group by id;
+SUM函数的语法是：
+SELECT SUM(expression )
+FROM tables
+WHERE predicates;

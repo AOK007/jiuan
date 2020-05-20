@@ -32,7 +32,7 @@ Listen 9321
 在最后添加：
 ServerName localhost:9321
 nginx:
-1,apt-get install nginx
+1,apt-get install  -y nginx
 2,修改端口
 /etc/nginx/sites-enabled/default
 listen 80 default_server;

@@ -1,0 +1,29 @@
+import  MySQLdb
+#导入数据库连接
+MySQLdb.connect( host:host,user:user,passwd:passwd,db:db ,charset:utf8)
+#数据库连接信息
+c =conn.cursor()
+#数据库连接游标
+c.execute(sql语句)
+#操作sql语句
+c.fetchone()
+返回一行数据
+c.fetchall()
+返回所有数据
+row=c.fetchone()
+print(row)
+返回数据库一行数据并打印出来
+rows=c.fetchall()
+print(rows)
+返回所有信息打印出来
+for i in range(c.rowcount)
+  row=c.fetchone()
+  print(row)  #循环打印
+for i in range(c.rowcount)
+  rows=c.fetchmanay(100)
+  print(rows)  #数据量多的循环100条打印打印
+查询
+conn.commit() 修改 跟新 都要加这个
+for x in range (1000)
+c.execute(f "insert into 表（字段1，字段2,字段3）values('xxx{x+1}','saa',6)")
+conn.commit() （插入1000条数据）

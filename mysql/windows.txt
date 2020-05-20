@@ -1,0 +1,7 @@
+首先解析此英文：ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)；解析的地方有两处：①Access denied（拒绝访问）；②using password：NO/YES
+到安装的MySQL的目录下，找my.ini文件；
+
+在[mysqld]后添加skip-grant-tables（使用 set password for设置密码无效，且此后登录无需键入密码）
+
+skip-grant-tables     #在my.ini，[mysqld]下添加一行，使其登录时跳过权限检查
+重启MySQL服务器。
