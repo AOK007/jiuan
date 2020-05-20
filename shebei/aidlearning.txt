@@ -99,7 +99,7 @@ listen [::]:9322 default_server;
 ssh
 apt-get  install  -y openssh-server
 cd /etc/ssh （华为平板无效）
-vi sshd_config
+vi /etc/ssh/sshd_config
 Port 9696
 PasswordAuthentication yes
 ListenAddress 0.0.0.0

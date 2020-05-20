@@ -1,0 +1,18 @@
+索引：排好序快速找到数据 提高查询速度，降低了跟新速度
+b树+索引，哈希索引 b树索引
+优势 提高数据检索效率，降低数据库IO成本 通过索引列对数据进行排序。降低数据排序成本降低cpu消耗
+#索引分类 单值索引 唯一索引 复合索引 基本语法
+复合索引 一个索引包含多个列 
+唯一索引 索引列唯一 但允许空 比方银行卡号。身份证号 unique(唯一)
+单值索引 一个索引包含单个列 一个表可以多个单列索引建议一张表不要超过5个
+基本语法
+create unique index indexname on mytable(columnname(length));(唯一索引创建)
+alter mytable add unique index indexname on (columnname(length))
+DROP INDEX indexname on mytable; 删除索引
+show index from table_name; 查看索引
+可以通过添加主键的方式添加唯一索引
+#索引结构
+哪些需要索引
+表数据太少的没必要建索引，字段值只有0/1没必要要
+哪些不需要索引
+drop index 索引名 on table_name
