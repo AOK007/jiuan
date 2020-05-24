@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>天凡</title>
+        <style type="text/css">
+            #show{border:1px solid #ef3333;width:200px;height:24px;}
+        </style>
+    </head>
+    <body>
+        <div id="show"></div>
+        <script type="text/javascript">
+            var str="这儿的文字一个一个的出现来 今天真的是好日子";
+            var len=str.length;
+            var i=1;
+            function showword(){
+                document.getElementById("show").innerHTML=str.substr(0,i);
+                i++;
+                if(i>len){
+                clearInterval("done");
+                }
+            }
+            var done=setInterval("showword()",500);
+        </script>
+    </body>
+</html>

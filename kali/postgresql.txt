@@ -1,0 +1,19 @@
+service postgresql start
+sudo -u postgres psql #登录控制台
+修改密码 、
+\password username
+创建新用户
+postgres=# CREATE USER username WITH PASSWORD 'password' NOCREATEDB;
+例如：CREATE USER admin WITH PASSWORD '12345' NOCREATEDB;
+若创建成功则返回CREATE ROLE
+创建数据库
+postgres=# CREATE DATABASE dbname OWNER username;
+例如：CREATE DATABASE msf OWNER admin;
+若创建成功，则返回CREATE DATABASE
+显示数据库列表：
+postgres=# \l  (是小写的L)
+msf连接postgresql数据库
+msf>db_connect username:password@127.0.0.1/dbname
+例如：db_connect admin:12345@127.0.0.1/msf
+检查是否连接上
+

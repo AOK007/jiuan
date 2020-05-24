@@ -57,9 +57,7 @@ wget -qO- https://get.docker.com/ | sh
 应用新的组成员身份：su - ${USER}
 配置国内镜像 新版的 Docker 使用 /etc/docker/daemon.json来配置 Daemon。"http://hub-mirror.c.163.com"
 systemctl restart docker
-<<<<<<< HEAD
-=======
-=======
+
 windows
 下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
 点击 Docker QuickStart 图标来启动 Docker Toolbox 终端。

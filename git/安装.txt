@@ -27,6 +27,7 @@ git add .（添加）
 git commit -m "注释"
 git push（推送）
 git pull (拉取)
+git clone http地址   # 拷贝仓库
 设置用户
 git 在pull或者合并分支的时候有时会遇到这个界面。可以不管(直接下面3,4步)，如果要输入解释的话就需要:
 1.按键盘字母 i 进入insert模式
