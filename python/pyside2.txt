@@ -1,0 +1,2 @@
+图形化界面
+pip3 install pyside2

@@ -1,0 +1,13 @@
+http://www.android-studio.org/  # 下载软件
+cd studio/bin  #进入bin目录
+sh studio.sh 安装
+vi /usr/share/applications/android-studio.desktop
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Comment=Android Studio Integrated Development Environment
+Icon=/home/download/studio/bin/studio.png
+Exec=/home/download/studio/bin/studio.sh  # install path, default '/usr/xxx'
+Terminal=false
+
+

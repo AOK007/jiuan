@@ -1,0 +1,11 @@
+PackageKit是一个离线更新服务，基本没啥用途，应该永久禁用。
+centos7下，打开： /etc/yum/pluginconf.d/langpacks.conf 
+将第一行：enable=1改为enable=0
+ok，在执行sudo yum update,就不会被锁定了。
+ rm -f /var/run/yum.pid  解决宁一程序
+yum update
+yum install -y openssl openssh-server # 安装SSH
+用vim打开配置文件 vi /etc/ssh/sshd_config  
+启动ssh的服务： systemctl start sshd.service
+设置开机自动启动ssh服务  systemctl enable sshd.service
+设置文件夹~/.ssh的访问权限： chmod 700 .ssh    chmod 600 .ssh/* 
