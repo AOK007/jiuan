@@ -15,7 +15,7 @@ printer = turtle.Turtle()
 printer.hideturtle()
 printer.penup()
 printer.back(200)
-printer.write("雨欣 520 happy!\n\n", align="right", font=("楷体", 16, "bold"))
+printer.write("你愿意和我在一起吗\n\n", align="right", font=("楷体", 16, "bold"))
 printer.write(" 玫瑰心情，情系你我    ", align="center", font=("楷体", 12, "normal"))
  
 turtle.fillcolor("red")
