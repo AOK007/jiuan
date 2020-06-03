@@ -26,3 +26,7 @@ top  q退出 显示当前进展
 free -h 查看当前内存
 ps a 显示控制终端信息 u 用户信息 x 显示没有控制终端的进程（ps aux）
 kill 杀死进程 kill -9 进程id 
+gzip -9 文件名 文件名.gz  高度压缩
+gzip -d 文件名.gz 解压
+tar -zxvf 文件名.gz 解压
+userdel -r name 删除用户名及目录

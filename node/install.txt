@@ -20,8 +20,8 @@ cd node
  ./configure
 make
 make install
-apt-get install nodejs
-apt-get install npm
+apt-get install -y nodejs
+apt-get install -y npm
 更新npm
 npm install --global npm@latest
 npm uninstall -g npm

