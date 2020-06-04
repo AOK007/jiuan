@@ -1,0 +1,3 @@
+pip3 install selenium
+https://chromedriver.storage.googleapis.com/index.html 
+下载浏览器对应驱动 

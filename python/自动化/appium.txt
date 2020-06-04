@@ -1,0 +1,4 @@
+安装client库
+pip install appium-python-client
+安装appium server
+https://github.com/appium/appium-desktop/releases/tag/v1.17.1 

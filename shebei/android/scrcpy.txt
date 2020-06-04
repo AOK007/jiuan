@@ -1,0 +1,85 @@
+手机基本人手必备。比方去客户展示需要投屏到pc这样可以直接在电脑上操作展示手机，市面上很多投屏软件但是我不想在手机安装太多东西怎么办？可以在电脑安装投屏神器scrcpy操作手机.
+
+scrcpy就是通过adb调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的Android设备。它可以通过USB连接，也可以通过Wifi连接（类似于隔空投屏），而且不需要任何root权限，不需要在手机里安装任何程序。scrcpy同时适用于GNU / Linux，Windows和macOS。
+
+Windows环境使用
+
+首先下载scrcpy，可去releases下载最新版本。
+
+下载地址：https://github.com/Genymobile/scrcpy/releases
+由于github下载速度慢下载不了软件的朋友可以留言，或者留下邮箱地址我发给你们.
+
+adb调试的开启一般是多次点击手机系统版本，如我用的是小米手机，开启方法是 “设置”->“我的设备”->“全部参数”->点击7下MIUI版本，开启“开发者选项”。然后在 “设置”->“更多设置”->“开发者选项” 中同时开启 USB调试 和 USB调试(安全设置)。其他手机开发者模式参考对应手机论坛文档.
+
+手机和电脑通过数据线连接.直接运行 scrcpy.exe 就可以看到手机画面了.
+
+当然经常来回走动不能老是把手机连接数据线可以使用无线连接.
+
+此连接方式更加方便快捷，若宽带速率高，使用效果更佳，使用方法也非常简单。
+
+1.确保PC和手机在同一Wifi中
+
+2.手机先通过USB与PC相连
+
+3.在PC上cmd运行 adb tcpip 服务端口，如端口为5555
+
+示例代码
+
+D:\scrcpy>adb tcpip 5555
+
+restarting in TCP mode port: 5555
+
+然后 D:\scrcpy>adb connect ip:5555
+
+然后打开 scrcpy.exe 就可以看到手机画面了
+
+ 如果连接异常可以干掉服务在连接adb kill-server 重启手机后无效了测试是root的手机
+
+linux 环境使用 
+
+官网也说了有多种安装方式，我直接用最简单的debian系统apt安装
+
+
+
+apt install scrcpy
+
+要使用scrcpy还得安装android工具adb
+
+
+
+apt install adb
+
+有线连接启动流程：
+
+1.在手机端的设置中把android手机调试模式打开
+
+2.usb接入电脑
+
+​3.启动scrcpy
+
+$ /usr/bin/scrcpy
+
+4.可以看到会启动一个投屏窗口
+
+无线连接启动流程：：
+
+1.在手机端的设置中把android手机调试模式打开
+
+2.usb接入电脑
+
+3.通过adb命令启动手机上的5555端口tcp服务
+
+$ adb tcpip 5555
+
+提示“restarting in TCP mode port: 5555”
+
+6.连接到手机的5555端口
+
+$ adb connect 192.168.1.19:5555 提示连接成功
+
+7.此时拔掉usb线（usb连接只是为了通过电脑输入控制命令，我们已经设置好了5555端口并连接上了，usb线就没用了）
+
+8.在电脑上启动scrcpy  运行 /usr/bin/scrcpy 就可以看到手机界面这样电脑就可以操作手机了.
+
+
+
