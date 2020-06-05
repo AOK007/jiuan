@@ -14,8 +14,8 @@ Type=Application
 Name=Pycharm
 GenericName=Pycharm3
 Comment=Pycharm3:The Python IDE
-Exec=sh /home/soft/pycharm-community-2017.3.1/bin/pycharm.sh （修改自己文件目录）
-Icon=/home/soft/pycharm-community-2017.3.1/bin/pycharm.png （修改自己文件目录）
+Exec= /home/soft/pycharm-community-2017.3.1/bin/pycharm.sh  #（修改自己文件目录）
+Icon=/home/soft/pycharm-community-2017.3.1/bin/pycharm.png  #（修改自己文件目录）
 Terminal=pycharm
 Categories=Pycharm;
 6.修改对应的路径

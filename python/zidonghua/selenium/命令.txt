@@ -2,7 +2,47 @@ send_keys （）输入
 click() 点击
 save_screenshot('')保存截图
 time.sleep(2)延迟2秒
-browser.save_screenshot('baidu.png') #保存截图
-print (browser.page_source) #打印页面
-print (browser.get_cookies()) #打印 cookies
-print (browser.current_url) # 打印url
+driver.save_screenshot('baidu.png') #保存截图
+print (driver.page_source) #打印页面
+print (driver.get_cookies()) #打印 cookies
+print (driver.current_url) # 打印url
+1.#获取元素
+ret1 = driver.find_elemrnt_by_id（'id'）
+#跟据标签ID值获取标签
+ret2 = driver.find_elemrnts_by_id（'id'）
+#跟据标签ID值获取多个标签
+ret3 = driver.find_elemrnts_by_class_name('class')
+#跟据标签class值获取多个标签
+ret4 = driver.find_elemrnts_by_xpath('xpath')
+#跟据标签xpath值获取多个标签
+ret5 = driver.find_elemrnt_by_link_text('文本')
+#跟据标签文本值获取标签
+ret6 = driver.find_elemrnt_by_particl_link_text('文本')
+print(len(ret6))
+#跟据标签文本值获取元素值模糊定位
+ret7 = driver.find_elemrnt_by_tag_name('div')
+print(len(ret7))
+#跟据标签名获取元素列表
+ret8 = driver.find_elemrnt_by_tag_name('h1')
+print(ret8.text)
+#获取打印h1标签的文本内容
+ ret9 = driver.find_elemrnt_by_link_text('文本')
+print(ret9.get_attribute('href'))
+#通过标签包裹文本内容获取href属性值并打印
+2.#操作浏览器
+1.获取所有窗口
+current_window = driver.window_handles
+2.跟据窗口索引切换
+driver.switch_to.window(current_windows [1])
+3.switch方法实现页面前进后退
+driver.forward() # 前进
+driver.back() # 后退
+4.嵌套网页操作
+driver.switch_to_frame(0) # 注意嵌套网页也是有索引的模拟登陆浏览器
+ driver.find_elemrnts_by_xpath('xpath').click（）
+time.sleep(10) #延迟10秒记得要引入包  import time
+ driver.find_elemrnts_by_xpath('xpath').send_keys('输入值')
+ driver.find_elemrnts_by_xpath('xpath').send_keys('输入值')
+ driver.find_elemrnts_by_xpath('xpath').click（）
+遇到弹窗处理
+alert = driver.switch_to_alert()
