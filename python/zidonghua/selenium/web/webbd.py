@@ -11,6 +11,6 @@ browser.find_element_by_id("kw").send_keys("selenium")
 #找到元素 输入值
 browser.find_element_by_id("su").click()
 #找到元素 点击操作
-browser.save_scrrrnshot('baidu.png')
+browser.save_screenshot('baidu.png')
 browser.quit()
 # 关闭浏览器

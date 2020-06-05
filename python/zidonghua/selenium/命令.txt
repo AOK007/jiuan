@@ -1,4 +1,8 @@
 send_keys （）输入
 click() 点击
-save_scrrrnshot('')保存截图
+save_screenshot('')保存截图
 time.sleep(2)延迟2秒
+browser.save_screenshot('baidu.png') #保存截图
+print (browser.page_source) #打印页面
+print (browser.get_cookies()) #打印 cookies
+print (browser.current_url) # 打印url
