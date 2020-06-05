@@ -60,7 +60,6 @@ pip install scrapyd
 pip install django
 apt-get install node
 apt-get install curl
-apt-get install openssh-clients(src)
 apt-get install php-fpm
 apt-get install netcat（）
 apt-get install nmap（）
