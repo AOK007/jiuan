@@ -42,3 +42,8 @@ span标签内容直接一个/就OK
         ter2 = response.xpath("//div[@class='box hover-shine']//a/text()").extract()
         # ter3 = response.xpath("//div[@class='replyList']//a/text()").extract()
         print(ter2,ter1)
+Linux 下解决scrapy没有未找到命令错误
+解决方法：进入root权限 创建软连接
+ln -s /home/用户名/.local/bin/scrapy /usr/bin/scrapy
+解决完毕
+

@@ -1,0 +1,6 @@
+./bin/elsaticarch #启动
+./bin/kibana
+错误原因：使用非 root用户启动ES，而该用户的文件权限不足而被拒绝执行。
+解决方法： chown -R 用户名:用户名  文件（目录）名
+例如： chown -R abc:abc searchengine
+再启动ES就正常了
