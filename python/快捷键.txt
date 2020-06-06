@@ -1,3 +1,0 @@
-control+d 复制一行插入下面ctrl键=control
-
-alt+shift+↑↓

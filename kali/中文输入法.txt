@@ -1,4 +1,0 @@
-apt-get install fcitx （安装输入法框架）
-apt-get install fcitx-googlepinyin（安装谷歌输入法）
-重启 然后可以使用
-验证 Ctrl+Space 切换输入法
