@@ -71,3 +71,13 @@ CREATE TABLE ccc01;table-name (name char(8)not null );创建表
 ﻿drop table ccc02;删除表
 ﻿alter table id drop id;删除id表id列
 drop index 索引名 on table_name 删除索引
+4.接下来就是用sql来修改root的密码
+进入到终端当中，敲入 mysql -u root -p 命令然后回车，当需要输入密码时，直接按enter键，便可以不用密码登录到数据库当中
+mysql> update user set password=password("你的新密码") where user="root";
+mysql> flush privileges;
+mysql> quit
+Step3: FLUSH PRIVILEGES 清除权限
+Step4: SET PASSWORD FOR 'root'@'localhost' = PASSWORD('你的新密码'); 设置新密码。
+这样就修改/添加密码成功了。
+ # 提示 ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+sudo mysql -u root -p
