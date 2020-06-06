@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 termux : pkg install git  ∏¥÷∆√ÿ‘øµΩ/data/data/com.termux/files/home/.ssh/authorized_keys
 linux deploy ◊‘¥¯ 22
 linux ◊‘¥¯ 22
@@ -35,4 +36,43 @@ git ‘⁄pullªÚ’ﬂ∫œ≤¢∑÷÷ßµƒ ±∫Ú”– ±ª·”ˆµΩ’‚∏ˆΩÁ√Ê°£ø…“‘≤ªπ‹(÷±Ω”œ¬√Ê3,4≤Ω)£¨»Áπ˚“™ 
 3.∞¥º¸≈Ã◊Û…œΩ«"Esc"
 4. ‰»Î":wq",◊¢“‚ «√∞∫≈+wq,∞¥ªÿ≥µº¸º¥ø…
  git fsck --full #≤Èø¥º«¬º
+=======
+termux : pkg install git  ∏¥÷∆√ÿ‘øµΩ/data/data/com.termux/files/home/.ssh/authorized_keys
+linux deploy ◊‘¥¯ 22
+linux ◊‘¥¯ 22
+1.…˙≥…√ÿ‘øGPG
+gpg --full-generate-key
+ªÚ’ﬂ
+1.gpg --default-new-key-algo rsa4096 --gen-key
+…Ë÷√”√ªß” œ‰
+ ‰»Î“ª∏ˆ∞≤»´µƒ√‹¬Î∂Ã”Ô°£≤Œøº∞∏¿˝
+ƒø¬º°Æ/home/ccc01/.gnupg
+2.$ gpg --list-secret-keys --keyid-format LONG
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot 
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+’≥Ã˘“‘œ¬Œƒ±æ£¨ÃÊªªŒ™ƒ˙“™ π”√µƒGPG√‹‘øID°£‘⁄¥À æ¿˝÷–£¨GPG√‹‘øIDŒ™3AA5C34371567BD2£∫
+3.$ gpg --armor --export 3AA5C34371567BD2
+∏¥÷∆ƒ˙µƒGPG√‹‘ø£¨“‘ø™Õ∑-----BEGIN PGP PUBLIC KEY BLOCK-----∫ÕΩ·Œ≤-----END PGP PUBLIC KEY BLOCK-----°£
+Ω´GPG√‹‘øÃÌº”µΩƒ˙µƒGitHub’ 
+…˙≥…√ÿ‘øssh
+ssh-keygen -t rsa -b 4096 -C "www8899878@163.com"
+git config --global user.name "www8899878"  …Ë÷√’Àªß
+git config --global user.email "www8899878@163.com"  ” œ‰µÿ÷∑
+git init≥ı ºªØ
+git add .£®ÃÌº”£©
+git commit -m "◊¢ Õ"
+git push£®Õ∆ÀÕ£©
+git pull (¿≠»°)
+git clone httpµÿ÷∑   # øΩ±¥≤÷ø‚
+…Ë÷√”√ªß
+git ‘⁄pullªÚ’ﬂ∫œ≤¢∑÷÷ßµƒ ±∫Ú”– ±ª·”ˆµΩ’‚∏ˆΩÁ√Ê°£ø…“‘≤ªπ‹(÷±Ω”œ¬√Ê3,4≤Ω)£¨»Áπ˚“™ ‰»ÎΩ‚ Õµƒª∞æÕ–Ë“™:
+1.∞¥º¸≈Ã◊÷ƒ∏ i Ω¯»Îinsertƒ£ Ω
+2.–ﬁ∏ƒ◊Ó…œ√Êƒ«––ª∆…´∫œ≤¢–≈œ¢,ø…“‘≤ª–ﬁ∏ƒ
+3.∞¥º¸≈Ã◊Û…œΩ«"Esc"
+4. ‰»Î":wq",◊¢“‚ «√∞∫≈+wq,∞¥ªÿ≥µº¸º¥ø…
+ git fsck --full #≤Èø¥º«¬º
+>>>>>>> a47bb66a90fdeb5a0ade12b364d8b375d75b1ac4
 git log --oneline --decorate --all |head -n 8 ≤Èø¥8––»’÷æ
