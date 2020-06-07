@@ -15,11 +15,9 @@ alt+enter
 linux
 django-admin startproject one(项目名)
 cd one(在项目目录）
-python3 manage.py startapp myapp（生成app）
 ./manage.py runserver 0.0.0.0:8000(外网访问）
 windows
-django-admin startproject one (启动失败的可以进入cd /home/ccc01/.local/lib/python3.8/site-packages/django绝对路径生成)
-export PATH=/home/ccc01/.local/bin/:$PATH # 加入变量临时有效
+django-admin startproject one
 python manage.py runserver 0.0.0.0:8000
 添加应用名称
 python manage.py startapp user(用户)
