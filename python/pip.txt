@@ -10,3 +10,6 @@ pip install -i https://pypi.douban.com/simple lxml
 这样会超级快
 或者是安装其他的插件的时候 比如 locustio ，也可以使用该库进行安装
 pip install -i https://pypi.douban.com/simple locustio
+pip uninstall xxx  卸载pip模块
+pip 下载慢的输入 对应的看看使用pip pip3 版本
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
