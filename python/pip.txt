@@ -13,3 +13,4 @@ pip install -i https://pypi.douban.com/simple locustio
 pip uninstall xxx  卸载pip模块
 pip 下载慢的输入 对应的看看使用pip pip3 版本
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+系统虽然给出了更新pip的命令，不过这里不建议大家使用这样的命令，建议使用 sudo pip3 install --upgrade pip 来更新pip3。

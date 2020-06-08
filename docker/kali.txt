@@ -16,7 +16,7 @@ deb http://http.kali.org/kali kali-rolling main non-free contrib
 #中科大的源
 deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 docker run -it kalilinux/kali-linux-docker /bin/bash 启动kali
-docker run -it kali /bin/bash （创建ubuntu容器）
+docker run -it kali /bin/bash （创建ubuntu容器） 容器镜像：版本号
 docker container start 容器名或容器id 启动一个已经停止的容器
 docker container rm 容器名或容器id 删除容器
 docker container ls 查询运行的容器
