@@ -6,8 +6,21 @@
 get 参数
 #锚点
 $结尾传参数
-
 正则（\d+）一个（）代表一个参数
 知识点
 context=locats()
 locats()返回字典里所有获得的参数值如果要单个的就自定义字典内容
+在app01应用中创建urls.py文件，在该文件中配置url和视图函数的对应关系：
+    # app01.py
+    urlpatterns = [
+        ...
+        # 进入首页
+        url(r'^index$', views.index),
+    ]
+在项目下urls.py中，把应用下的urls.py包含进来：
+    # Project01/urls.py
+    urlpatterns = [
+        # 包含应用app01下的urls.py
+        url(r'^app01/', include('app01.urls')),
+    ]
+子路由引入 improt myapp.views
