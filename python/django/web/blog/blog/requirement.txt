@@ -1,4 +1,6 @@
 astroid==2.3.3
+pillow
+django-imagekit
 certifi==2019.6.16
 chardet==3.0.4
 colorama==0.4.3
