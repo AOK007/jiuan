@@ -4,7 +4,8 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
  python get-pip.py 
 python3 get-pip.py 
 完整系统可以直接使用下面安装
-apt-get install python-pip
+sudo apt install python3-pip
+apt-get install python-pip3
 python 在安装lxml的时候，总是安装失败，这个时候，我们可以换一个库进行安装，我这使用的是豆瓣 
 pip install -i https://pypi.douban.com/simple lxml
 这样会超级快
@@ -14,3 +15,4 @@ pip uninstall xxx  卸载pip模块
 pip 下载慢的输入 对应的看看使用pip pip3 版本
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 系统虽然给出了更新pip的命令，不过这里不建议大家使用这样的命令，建议使用 sudo pip3 install --upgrade pip 来更新pip3。
+pip3 install -r requirements.txt 一次性安装需要的所有依赖
