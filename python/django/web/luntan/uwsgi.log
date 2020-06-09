@@ -1,0 +1,21 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jun  9 15:41:45 2020] ***
+compiled with version: 9.3.0 on 04 June 2020 12:46:36
+os: Linux-5.6.0-kali2-amd64 #1 SMP Debian 5.6.14-1kali1 (2020-05-25)
+nodename: kali
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/xxx/jiuan/python/django/web/luntan
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/xxx/jiuan/python/django/web/luntan/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 9733
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
