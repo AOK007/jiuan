@@ -1,6 +1,5 @@
 astroid==2.3.3
-pillow
-django-imagekit
+Pillow==5.4.1
 certifi==2019.6.16
 chardet==3.0.4
 colorama==0.4.3
@@ -34,7 +33,6 @@ oauth==1.0.1
 oauth2client==4.1.3
 oauthlib==3.0.1
 pilkit==2.0
-Pillow==5.4.1
 pyasn1==0.4.5
 pyasn1-modules==0.2.4
 Pygments==2.3.1
