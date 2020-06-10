@@ -1,0 +1,15 @@
+chardet==3.0.4
+Django==2.0
+idna==2.9
+jmespath==0.9.5
+mysqlclient==1.4.6
+Pillow==7.0.0
+PyMySQL==0.9.3
+python-memcached==1.59
+pytz==2019.3
+requests==2.23.0
+six==1.14.0
+sqlparse==0.3.1
+urllib3==1.25.8
+Whoosh==2.7.4
+wincertstore==0.2

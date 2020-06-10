@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block style %}
+<link href="{% static 'css/detail.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    文章详情
+{% endblock %}
+{% block content %}
+<!-- 主体部分标题 -->
+      <div class="blog-header">
+        <h1 class="blog-title">{{article.title}}</h1>
+        <p class="lead blog-description">{{ article.info }}</p>
+        <p class="blog-post-meta">时间：{{ article.pub_time }} &nbsp;&nbsp;分类：<a href="#">{{ article.classify.name }}</a> &nbsp;&nbsp;作者：<a href="#">{{ article.author.username }}</a></p>
+      </div>
+      <div class="row">
+        <!-- 文章内容-->
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+              {{ article.content|safe }}
+          </div>
+
+        </div>
+        <!-- 侧边栏 -->
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>关于</h4>
+            <p>项目简介</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>源码</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Gitee</a></li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+{% endblock %}
