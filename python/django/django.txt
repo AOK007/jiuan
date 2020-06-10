@@ -8,8 +8,8 @@ pip list（查看所有安装的模块）
 mysqlclient（mysql模块）
 pip uninstall django==1.4.20（卸载）
 pip install mysql-connector-python --allow-external安装mysql驱动）
-pip install mysql-connector （安装mysql驱动）
-pip install mysqlclient
+pip3 install mysql-connector （安装mysql驱动）
+pip3 install mysqlclient
 万能键
 alt+enter
 linux

@@ -12,3 +12,6 @@ redis 127.0.0.1:6379>
 127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在我们输入 PING 命令。
 redis 127.0.0.1:6379> ping
 PONG
+修改密码 查找port 修改端口号, 查找requirepass修改密码
+redis-cli -p 1101 -a Qq2389110614  端口号 -a 密码
+启动服务 redis-server 

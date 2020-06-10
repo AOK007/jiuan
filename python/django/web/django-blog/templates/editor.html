@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block style %}
+      <link href="{% static 'css/editor.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    编辑
+{% endblock %}
+{% block content %}
+    <form class="form-content">
+      <div class="form-group">
+        <label for="title">标题</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="文章标题">
+      </div>
+
+      <div class="form-group">
+        <label for="info">概要</label>
+        <input type="text" class="form-control" id="info" placeholder="文章概要">
+      </div>
+
+      <div class="form-group">
+        <label for="classify">分类</label>
+        <select class="form-control" id="classify">
+            {% for classify in classifies %}
+                <option value="{{ classify.pk }}">{{classify.name}}</option>
+            {% endfor %}
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="content">内容</label><br>
+        <div id="content"></div>
+      </div>
+
+      <div class="form-group pull-right">
+        <button class="submit-btn">发布</button>
+      </div>
+
+    </form>
+{% endblock %}
+
+{% block script %}
+  <script  src="{% static 'js/wangEditor.js' %}"></script>
+  <script  src="{% static 'js/editor.js' %}"></script>
+{% endblock %}
+
+</body>
+</html>

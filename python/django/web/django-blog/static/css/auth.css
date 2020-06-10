@@ -1,0 +1,96 @@
+.mask {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      z-index: 200;
+    }
+
+    .wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 410px;
+      height: 484px;
+      margin-top: -242px;
+      margin-left: -205px;
+      overflow: hidden;
+    }
+
+    .main {
+      position: relative;
+      width: 820px;
+      height: 100%;
+      left: 0;
+    }
+
+    .main-item {
+      background-color: #f5f5f5;
+      width: 410px;
+      padding-top: 20px;
+      float: left;
+    }
+
+    .form-content {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    .form-title h2 {
+      float: left;
+    }
+
+    .form-title i {
+      float: right;
+
+      cursor: pointer;
+    }
+
+    .form-group {
+      overflow: hidden;
+    }
+
+    .login-submit-btn {
+      width: 80%;
+      float: left;
+    }
+    .register-submit-btn {
+      width: 80%;
+      float: left;
+    }
+
+    .switch {
+      height: 32px;
+      line-height: 32px;
+      font-size: 15px;
+      padding-right: 5px;
+      cursor: pointer;
+    }
+
+
+    /* loading */
+    .loading {
+      width: 23px;
+      height: 23px;
+      display: inline-block;
+      border: 2px solid;
+      border-color: #333 #333 transparent;
+      border-radius: 50%;
+      box-sizing: border-box;
+      /*动画时间1s，线性变化，无限循环*/
+      animation: loading 1s linear infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
