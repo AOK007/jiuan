@@ -1,0 +1,60 @@
+/*
+ * 导航样式
+ */
+.blog-masthead {
+  background-color: #428bca;
+}
+/* 每个item的样式 */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #cdddeb;
+}
+.blog-nav-item-first{
+  padding-left: 0;
+}
+/* 鼠标放在上面时的样式 */
+.blog-nav-item:hover {
+  color: #fff;
+}
+/* 选中时的样式 */
+.blog-nav .active {
+  color: #fff;
+}
+
+/* 分类下列表 */
+.categories {
+  position: absolute;
+  display: none;
+  top:42px;
+  left: 0;
+  right: 0;
+  color: #cdddeb;
+
+  background-color: #428bca;
+  padding-inline-start: 0;
+}
+.categories li{
+  margin-top: 5px;
+  text-align: center;
+}
+.categories li a{
+  color: #cdddeb;
+}
+.categories li a:hover{
+  color: #fff;
+}
+
+
+
+
+.blog-footer {
+  padding: 20px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
