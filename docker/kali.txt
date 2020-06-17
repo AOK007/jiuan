@@ -1,5 +1,6 @@
 docker pull booyaabes/kali-linux-full （用这个镜像比较全太大了9G）
 加速器 配置"registry-mirrors": ["https://y2bpaqmy.mirror.aliyuncs.com"],
+docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01 #下载kali镜像
 docker login --username=www8899878@163.com registry.cn-hangzhou.aliyuncs.com 登录
 docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01   镜像版本号 拉取镜像
 docker commit 容器名 镜像名 保存容器为新的镜像
