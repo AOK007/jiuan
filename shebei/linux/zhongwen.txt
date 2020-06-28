@@ -1,0 +1,4 @@
+sudo apt-get install fcitx
+sudo apt-get install fcitx fcitx-googlepinyin
+安装完成之后，重启系统
+重启之后，可以在fcitx里面找到配置，然后设置输入法首选项，快捷键等。

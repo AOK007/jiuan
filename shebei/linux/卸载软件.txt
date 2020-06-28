@@ -1,4 +1,4 @@
-debian完全卸载删除应用
+exitdebian完全卸载删除应用
 参考
 https://blog.csdn.net/w3045872817/article/details/77334886
 
