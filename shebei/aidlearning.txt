@@ -1,6 +1,6 @@
 cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 apt-get update && apt-get update
-apt-get install openjdk-11-jdk
+apt-get install -y openjdk-11-jdk
 apt install apache2
 apt install -y default-mysql-server
 pip install scrapyd(先装 libxml2-dev libxslt-dev pip install lxml）（）
@@ -43,12 +43,13 @@ listen [::]:9322 default_server;
 4,etc/init.d/nginx start
 5,etc/init.d/nginx status
 ssh
-apt-get  install openssh-server
+apt-get  install -y openssh-server
 vi /etc/ssh/sshd_config
 Port 9696
 ListenAddress 0.0.0.0
 PermitRootLogin yes
 PrintMotd yes
+PasswordAuthentication yes
 ﻿cd /etc/apt&&cp sources.list sources.list.bak&&vi sources.list
 deb http://mirrors.163.com/debian/ buster main non-free contrib
 apt-get update && apt-get update

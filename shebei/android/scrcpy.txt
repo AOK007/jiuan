@@ -80,6 +80,7 @@ $ adb connect 192.168.1.19:5555 提示连接成功
 7.此时拔掉usb线（usb连接只是为了通过电脑输入控制命令，我们已经设置好了5555端口并连接上了，usb线就没用了）
 
 8.在电脑上启动scrcpy  运行 /usr/bin/scrcpy 就可以看到手机界面这样电脑就可以操作手机了.
+git clone https://github.com/Genymobile/scrcpy #下载安装
 
 
 

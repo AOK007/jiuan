@@ -1,5 +1,6 @@
 docker pull booyaabes/kali-linux-full （用这个镜像比较全太大了9G）
 加速器 配置"registry-mirrors": ["https://y2bpaqmy.mirror.aliyuncs.com"],
+docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01 #下载kali镜像
 docker login --username=www8899878@163.com registry.cn-hangzhou.aliyuncs.com 登录
 docker pull registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01   镜像版本号 拉取镜像
 docker commit 容器名 镜像名 保存容器为新的镜像
@@ -43,6 +44,8 @@ docker run -itd --name MyUbuntu -v /etc/apt:/home/etc  ubuntu:16.04 /bin/bash
 2.删除容器下的 sources.lis：rm /etc/apt/sources.list
 3.将本地 sources.list 复制过来 cp /home/etc/sources.list /etc/apt/
 4.再启动容器下载软件速度正常.
+docker container start becf19375f69   #华为容器kali
+docker exec -it becf19375f69 /bin/bash  #华为容器kali
 
 
 
