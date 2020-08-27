@@ -1,0 +1,9 @@
+apt-get remove --purge libreoffice*
+apt-get clean
+apt-get autoremove
+wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.1.1/binaries/zh-CN/Apache_OpenOffice_4.1.1_Linux_x86-64_install-deb_zh-CN.tar.gz
+tar -xzvf Apache_OpenOffice_4.1.1_Linux_x86-64_install-deb_zh-CN.tar.gz
+cd zh-CN/DEBS
+sudo dpkg -i *.deb
+cd desktop-integration
+sudo dpkg -i *.deb
