@@ -1,0 +1,14 @@
+import pandas as pd
+引入包
++ add  (fill_value=0)
+- sub   (fill_value=0)
+* mul  (fill_value=0)
+/ div (fill_value=0)
+运算操作
+df = pd.DataFrame({[]})列数据
+
+cloumes['',[''],]列标题
+ df = pd.to_excel('文件名')
+ #保存excel文件
+ df = pd.read_excel('文件名')
+ #打开excel文件
