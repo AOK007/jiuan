@@ -5,10 +5,28 @@ import pandas as pd
 * mul  (fill_value=0)
 / div (fill_value=0)
 运算操作
+赋值
+s[0]=10 赋值首行数据修改为10
+s.iloc[1]=11 修改第二行数据为11
+s.loc['c']=11 修改c数据行值为11
+s.loc['d']=12 增加D行数据为12
+s.iloc[1:3]=11 修改 2-4行值为11
+s.loc['a':'d']=11 修改 a-d行数据值为11
 df = pd.DataFrame({[]})列数据
 
-cloumes['',[''],]列标题
+columns['',[''],]列标题
  df = pd.to_excel('文件名')
  #保存excel文件
  df = pd.read_excel('文件名')
  #打开excel文件
+ 字符转换
+ df.['A'].str.strip() 去掉空格副，换行副
+ df.['A'].astype('str').str.strip()所有的都转换字符串类型
+ ××××DataFrame
+ [][] 数组
+ index 索引
+ cloumns 列表
+ ×××series
+ [][] 数组
+ index 索引
+ cloumns 列表
