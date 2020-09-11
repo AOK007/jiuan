@@ -22,6 +22,7 @@ print(df1)
 
 df2 = pd.DataFrame(
     {df1['价格'].sum(),df1['价格'].sum()*1.13},
-    index=("未税","含税")
+    index=("未税","含税"),
+    #columns=('合计')
 )
 print(df2)
