@@ -81,3 +81,15 @@ Step4: SET PASSWORD FOR 'root'@'localhost' = PASSWORD('你的新密码'); 设置
 这样就修改/添加密码成功了。
  # 提示 ERROR 1698 (28000): Access denied for user 'root'@'localhost'
 sudo mysql -u root -p
+复制数据库，使用mysqldump及mysql的命令组合，一次性完成复制
+#mysqldump -u root -p123456 --add-drop-table db1| mysql -u root -p123456 newdb
+注意-p123456参数的写法：-p后面直接跟密码，中间没有空格)
+以上是在同一台MySQL服务器上复制数据库的方法。如果要复制到远程另一台MySQL服务器上，可以使用mysql的“ -h 主机名/ip”参数。前提是mysql允许远程连接，且远程复制的传输效率和时间可以接受。
+不在同一个mysql服务器上
+#mysqldump db1 -uroot -p123456 --add-drop-table | mysql -h 192.168.1.22 newdb -u root -p123456
+
+复制一个数据库中的几张表到另一个数据库
+mysqldump -uroot -proot --add-drop-table db1 table1 table2 | mysql -uroot -proot tpcms
+
+复制到不同主机
+mysqldump -uroot -proot --add-drop-table db1 table1 table2 | mysql -h 192.168.0.148 -uroot -proot db2
