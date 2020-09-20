@@ -21,6 +21,7 @@ int main()
             }
             j++;
         }
+        printf("\n");
         i++;
     }
         return 0;   
