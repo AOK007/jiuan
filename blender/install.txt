@@ -1,0 +1,6 @@
+# 安装依赖
+apt-get install build-essential git subversion cmake libx11-dev libxxf86vm-dev libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libglew-dev
+#安装
+apt install -y blender
+#启动blender
+/usr/bin/blender
