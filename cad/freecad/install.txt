@@ -1,0 +1,4 @@
+#安装
+apt install freecad
+#启动
+/usr/bin/freecad
