@@ -2,3 +2,4 @@ r  、w 、x:可读，可写 、可执行
 r-可读(read) w-可写(write) x-可执行(execute)
  ls -l 
 sudo chmod 777 /目录/ -R
+chown -R name:group /home # root授权给一个组用户文件夹读写权限
