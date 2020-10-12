@@ -1,0 +1,6 @@
+http://mirrors.ustc.edu.cn/debian/pool/non-free/r/r8168/r8168-dkms_8.048.03-1_all.deb
+下载驱动
+ sudo dpkg -i r8168-dkms_8.048.03-1_all.deb
+安装驱动
+sudo dpkg --configure -a
+配置
