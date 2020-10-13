@@ -14,4 +14,11 @@ DOCKER_OPTS="-b=br0"
 安装pipework
 git clone https://github.com/jpetazzo/pipework
 cp ./pipework/pipework /usr/local/bin/
-docker run -itd –name test1 –net=none  -h test1 centos /bin/bash    (test1 为容器名 centos镜像名）
+docker run -itd –name test1 –net=none  -h test1 centos /bin/bash
+    (test1 为容器名 centos镜像名）
+ #1.创建自定义网络
+ sudo docker network create --subnet=192.168.1.1/24 mynetwork
+ #2.检查网络是否创建
+ sudo docker network ls
+ #3.创建容器（容器名，容器网络路径，镜像创建）
+ sudo docker run -itd --name kali --net mynetwork --ip 192.168.1.195 registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01 /bin/bash
