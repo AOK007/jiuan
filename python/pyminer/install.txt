@@ -1,0 +1,14 @@
+#linux
+#第一步：下载源代码
+git clone https://gitee.com/py2cn/pyminer.git
+#第二步：同步安装依赖包和PyMiner，如果遇到安装失败的情况需要手动安装
+python3 -m pip install -i https://mirrors.cloud.tencent.com/pypi/simple -r requirements_linux.txt
+#第三步：运行主程序
+python3 app2.py
+#windows
+#第一步：下载源代码
+git clone https://gitee.com/py2cn/pyminer.git
+#第二步：同步安装依赖包和PyMiner，如果遇到安装失败的情况需要手动安装
+python -m pip install -i https://mirrors.cloud.tencent.com/pypi/simple -r requirements.txt
+#第三步：运行主程序
+python app2.py

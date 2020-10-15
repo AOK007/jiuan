@@ -16,9 +16,19 @@ git clone https://github.com/jpetazzo/pipework
 cp ./pipework/pipework /usr/local/bin/
 docker run -itd –name test1 –net=none  -h test1 centos /bin/bash
     (test1 为容器名 centos镜像名）
- #1.创建自定义网络
+ #1.创建自定义网络 这没有桥接网卡
  sudo docker network create --subnet=192.168.1.1/24 mynetwork
  #2.检查网络是否创建
  sudo docker network ls
  #3.创建容器（容器名，容器网络路径，镜像创建）
  sudo docker run -itd --name kali --net mynetwork --ip 192.168.1.195 registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01 /bin/bash
+删除网卡
+sudo docker network rm mynetwork
+容器打通网络
+docker network connect 网卡 容器名
+桥接模式创建自定义网
+docker network create --driver bridge --subnet 192.168.1.1/16 --gateway 192.168.1.1 mynet
+创建网络名称 继承宿主机网卡 并设置网卡就可以
+docker network create -d macvlan --subnet 192.168.1.0/16 --gateway 192.168.1.1 -o parent=enp3s0(网卡) mynet
+创建容器并链接自定义网络制定IP地址
+sudo docker run -itd --name kali --net mynet --ip 192.168.1.191  registry.cn-hangzhou.aliyuncs.com/jiuan/jiuan02:kali01 /bin/bash
